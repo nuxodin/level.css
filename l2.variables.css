@@ -1,12 +1,15 @@
---color-hsl-h: 38.8;
---color-hsl-s: 80%;
---color-hsl-l: 50%;
+:root {
+  --color-hsl-h: 38.8;
+  --color-hsl-s: 80%;
+  --color-hsl-l: 50%;
 
---color: hsl(var(--color-hsl-h), var(--color-hsl-s), var(--color-hsl-l));
---color-light: hsl(var(--color-hsl-h), var(--color-hsl-s), 85%);
---color-dark: hsl(var(--color-hsl-h), var(--color-hsl-s), 30%);
+  --color: hsl(var(--color-hsl-h), var(--color-hsl-s), var(--color-hsl-l));
+  --color-light: hsl(var(--color-hsl-h), var(--color-hsl-s), 85%);
+  --color-dark: hsl(var(--color-hsl-h), var(--color-hsl-s), 30%);
 
---color-bg: hsl(var(--color-hsl-h), var(--color-hsl-s), 99%);
---color-text: hsl(var(--color-hsl-h), var(--color-hsl-s), 1%);
+  --color-bg: hsl(var(--color-hsl-h), var(--color-hsl-s), 99%);
+  --color-text: hsl(var(--color-hsl-h), var(--color-hsl-s), 1%);
+
+}
 
 
