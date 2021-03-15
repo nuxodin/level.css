@@ -11,9 +11,10 @@
   --color-text: hsl(var(--color-hsl-h), var(--color-hsl-s), 2%);
   
   --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
-  --width:20rem;
-  --gap:2rem;
 
+  --width:20rem;
+  
+  --gap:2rem;
 }
 
 
