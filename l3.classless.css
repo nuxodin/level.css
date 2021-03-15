@@ -2,7 +2,7 @@ html {
   background-color:var(--color-bg);
   color:var(--color-text);
   font-family:var(--font);
-  font-size:calc(11px + 2vmin)
+  font-size:calc(12px + 1vmin)
 }
 a {
   color:var(--color);
