@@ -1,0 +1,4 @@
+.lx-invert {
+  background-color:var(--color-text);
+  text:var(--color-bg)
+}
