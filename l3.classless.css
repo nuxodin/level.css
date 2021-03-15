@@ -10,7 +10,6 @@ a {
 hr {
   color:var(--color);
 }
-
 main {
   max-width:var(--width);
   margin:auto;
