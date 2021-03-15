@@ -2,3 +2,6 @@ html {
   background-color:var(--color-bg);
   color:var(--color-text);
 }
+a {
+  color:var(--color);
+}
