@@ -1,16 +1,132 @@
+/* https://dev.to/5t3ph/my-top-css-tips-as-shared-on-twitter-part-1-23e2 */
+/* https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/style.css */
+
 html {
   background-color:var(--color-bg);
   color:var(--color-text);
   font-family:var(--font);
-  font-size:calc(12px + 1vmin)
+  font-size:calc(11px + .8vmin);
+  line-height:1.4;
+
+  word-break:   break-word; /* chrome, -firefox,  safari, -ie */
+  word-wrap:    break-word; /* chrome,  firefox,  safari,  ie   w3c changed to: zzz post ie11 */
+  overflow-wrap:break-word; /* chrome,  firefox,  safari, -ie */
+  -webkit-hyphens:auto;
+  hyphens:auto;
+}
+* {
+  scroll-behavior: smooth; /* or better on html only? */
 }
 a {
   color:var(--color);
 }
 hr {
-  color:var(--color);
+  color:var(--color-light);
 }
-main {
+body {
   max-width:var(--width);
   margin:auto;
+  padding:var(--gap);
+}
+
+h1 {
+  line-height:1;
+}
+h2 {
+  line-height:1.1;
+}
+:is(h1,h2,h3,h4,h5,h6,p):first-child {
+  margin-top:0;
+}
+
+img {
+  height:auto;
+  max-width:100%;
+  object-fit:cover;
+}
+
+table {
+  text-align: justify;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td, th {
+  padding: 0.5em;
+  border-bottom: 1px solid var(--color-light);
+}
+
+:focus-visible {
+  outline: 4px dashed var(--color-text);
+  outline-offset: 2px;
+}
+:focus:not(:focus-visible) {
+  outline: 1px dashed;
+}
+
+
+button,
+[type=submit],
+[type=button],
+[type=reset]
+{
+  background-color:var(--color);
+  color:var(--color-bg);
+  border:none;
+  padding:.4em 1em;
+}
+
+
+
+label,
+button,
+[type=checkbox],
+[type=radio] {
+	cursor:pointer;
+}
+
+input,
+textarea,
+select,
+button {
+	box-sizing:border-box;
+	padding: .2em .4em;
+	font-size:.9rem;
+  font-family:var(--font);
+	max-width:100%; /* todo: neu ok?*/
+  /* min-height:1.3em; todo? for select, input same height in chrome, firefox has same height if they have borders? or line-height: 1.2;? line-height can not be set on select */
+}
+xinput,
+textarea {
+	width:15em;
+	xborder-radius:0;
+}
+
+
+blockquote {
+  margin:0;
+  padding: calc(var(--gap) / 2);
+  padding-left: var(--gap);
+  border-left: 5px solid var(--color);
+  background-color: var(--color-light);
+}
+
+pre {
+  background-color: var(--color-light);
+  padding: var(--gap);
+  overflow-x: auto;
+}
+
+code {
+  font-size: 0.9em;
+  padding: 0 0.5em;
+  background-color: var(--color-light);
+  white-space: pre-wrap;
+  box-decoration-break: clone;
+  line-height:1;
+}
+
+mark {
+  background-color: hsl(var(--color-hsl-h), calc(var(--color-hsl-s) * 2), 80%, 0.5);
+  padding:0 0.15em;
 }
