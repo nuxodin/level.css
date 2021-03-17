@@ -4,6 +4,9 @@
 html {
   background-color:var(--color-bg);
   color:var(--color-text);
+
+	accent-color: var(--color); /* currently chromium canary */
+	
   font-family:var(--font);
   font-size:calc(11px + .8vmin);
   line-height:1.4;
