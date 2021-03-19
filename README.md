@@ -5,7 +5,7 @@ Welcome to level.css a new CSS library.
 ## inspiration
 This library is inspired by this other libraries
 
-https://github.com/csstools/sanitize.css
+https://github.com/csstools/normalize.css
 
 https://github.com/csstools/sanitize.css
 
