@@ -19,6 +19,17 @@ html {
 }
 a {
   color:var(--color);
+  transition:color .2s;
+}
+a:hover ,
+a:focus {
+    color:var(--color-text);
+}
+a:visited {
+  color:var(--color-text);
+}
+nav a {
+  text-decoration:none;
 }
 hr {
   color:var(--color-light);
@@ -35,15 +46,31 @@ h1 {
 h2 {
   line-height:1.1;
 }
+/*
 :is(h1,h2,h3,h4,h5,h6,p):first-child {
   margin-top:0;
 }
+:is(h1,h2,h3,h4,h5,h6,p):last-child {
+  margin-bottom:0;
+}
+*/
 
 img {
   height:auto;
   max-width:100%;
   object-fit:cover;
 }
+img,
+svg,
+video,
+canvas {
+	height: auto;
+}
+iframe {
+  box-sizing:border-box;
+  width:100%;
+}
+
 
 table {
   text-align: justify;
@@ -65,21 +92,12 @@ td, th {
 }
 
 
-button,
-[type=submit],
-[type=button],
-[type=reset]
-{
-  background-color:var(--color);
-  color:var(--color-bg);
-  border:none;
-  padding:.4em 1em;
-}
-
-
 
 label,
 button,
+[type=submit],
+[type=button],
+[type=reset],
 [type=checkbox],
 [type=radio] {
 	cursor:pointer;
@@ -96,10 +114,27 @@ button {
 	max-width:100%; /* todo: neu ok?*/
   /* min-height:1.3em; todo? for select, input same height in chrome, firefox has same height if they have borders? or line-height: 1.2;? line-height can not be set on select */
 }
-xinput,
+input,
 textarea {
 	width:15em;
-	xborder-radius:0;
+}
+[type=radio], [type=checkbox] {
+  width:auto;
+}
+
+button {
+  transition:color .2s;
+  background-color:var(--color);
+  color:var(--color-bg);
+  border:none;
+  padding:.4em 1em;
+}
+button:hover:not([disabled]) {
+  background-color:hsl(var(--hsl-h), var(--hsl-s),  calc(var(--hsl-s) * .5)  );
+  background-color:var(--color-dark);
+}
+button[disabled] {
+  opacity:.5;
 }
 
 
@@ -127,6 +162,6 @@ code {
 }
 
 mark {
-  background-color: hsl(var(--color-hsl-h), calc(var(--color-hsl-s) * 2), 80%, 0.5);
+  background-color: hsl(var(--hsl-h), calc(var(--hsl-s) * 3), 70%, 0.5);
   padding:0 0.15em;
 }

@@ -1,23 +1,34 @@
 :root {
-  --color-hsl-h: 38.8;
-  --color-hsl-s: 80%;
-  --color-hsl-l: 50%;
+  --hsl-h: 188.9;
+  --hsl-s: 55.1%;
+  --hsl-l: 38.4%;
 
-  --color-hsl-h: 188.9;
-  --color-hsl-s: 55.1%;
-  --color-hsl-l: 38.4%;
+  --color: hsl(var(--hsl-h), var(--hsl-s), var(--hsl-l));
 
+  --color-light: hsl(var(--hsl-h), var(--hsl-s), calc(var(--hsl-l) + (100% - var(--hsl-l)) * .9 ) );
+  --color-dark: hsl(var(--hsl-h), var(--hsl-s), calc(var(--hsl-l) * .7 ) );
 
-  --color: hsl(var(--color-hsl-h), var(--color-hsl-s), var(--color-hsl-l));
-  --color-light: hsl(var(--color-hsl-h), var(--color-hsl-s), 95%);
-  --color-dark: hsl(var(--color-hsl-h), var(--color-hsl-s), 30%);
+  --color-bg: hsl(var(--hsl-h), var(--hsl-s), 99%);
+  --color-text: hsl(var(--hsl-h), var(--hsl-s), calc(var(--hsl-l) * .4 ) );
 
-  --color-bg: hsl(var(--color-hsl-h), var(--color-hsl-s), 99%);
-  --color-text: hsl(var(--color-hsl-h), var(--color-hsl-s), 2%);
-
-  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  --font:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
 
   --width:35rem;
 
   --gap:1rem;
+
+  --color-2: hsl(calc(var(--hsl-h) + 60), var(--hsl-s), var(--hsl-l));
 }
+
+/* lascaux *
+:root {
+  --hsl-h: 321.3;
+  --hsl-s: 100%;
+  --hsl-l: 34.3%;
+
+  --color-light: rgb(229, 229, 229);
+
+  --color-bg: #fff;
+  --color-text: rgb(51, 51, 51);
+}
+/**/

@@ -3,47 +3,56 @@
 <head>
   <meta charset="UTF-8">
   <title>Level.css TEST</title>
+  <script src="./test.js" type=module></script>
+
+  <link rel="stylesheet" href="../l1.normalize.css">
+  <link rel="stylesheet" href="../l2.variables.css">
+  <link rel="stylesheet" href="../l3.classless.css">
+  <link rel="stylesheet" href="../l4.class.invert.css">
+  <link rel="stylesheet" href="../l4.class.slideshow.css">
+  <link rel="stylesheet" href="../l5.nomotion.css">
+  <link rel="stylesheet" href="../l5.print.css" disabled>
+
 </head>
-<body>
+<body class=xlx-invert  style="border-top:2rem solid var(--color)">
 
 <!-- based on https://github.com/alexandersandberg/html5-elements-tester -->
 
 
-<link rel="stylesheet" href="./l1.normalize.css">
-<link rel="stylesheet" href="./l2.variables.css">
-<link rel="stylesheet" href="./l3.classless.css">
-<link rel="stylesheet" href="./l4.class.invert.css">
 
 
 <header>
-  <h1>Classless CSS Framework explorer</h1>
-  <p>A test page for CSS frameworks showing examples and coverage info (what HTML elements are styled). <a href="https://www.skypack.dev/blog/2021/03/the-best-classless-css-frameworks-in-2021/">Read the post about classless frameworks at the Skypack Blog.</a></p>
+  <h1>Level-x CSS Framework explorer</h1>
+  <p>A test page for CSS frameworks showing examples and coverage info (what HTML elements are styled).</p>
   <p>Forked from <a href="https://github.com/alexandersandberg/html5-elements-tester">HTML5 elements tester</a>. </p>
-
-  <div>
-    <h2>Use this framework in your own code:</h2>
-    <pre><code id="code-snippet-style">No framework selected</code></pre>
-  </div>
 </header>
 
 <main id="main">
-  <nav id="nav" class=lx-invert>
-    <div>
-      <ul class=lx-invert>
-        <li><a href="#sections">Sections</a></li>
-        <li><a href="#grouping-content">Grouping content</a></li>
-        <li><a href="#text-level-semantics">Text-level semantics</a></li>
-        <li><a href="#edits">Edits</a></li>
-        <li><a href="#embedded-content">Embedded content</a></li>
-        <li><a href="#tabular-data">Tabular data</a></li>
-        <li><a href="#forms">Forms</a></li>
-        <li><a href="#interactive-elements">Interactive elements</a></li>
-        <li><a href="#scripting">Scripting</a></li>
-        <li><a href="#coverage-table">Coverage info</a></li>
-      </ul>
-    </div>
+
+    <div style="height:300px; background:var(--color)">--color</div>
+    <div style="height:300px; background:var(--color-dark)">--color-dark</div>
+    <div style="height:300px; background:var(--color-light)">--color-light</div>
+    <div style="height:300px; background:var(--color-text)">--color-text</div>
+
+    <ul class=lx-slideshow>
+      <li>Slide 1</li>
+      <li>Slide 2</li>
+      <li>Slide 3</li>
+      <li hidden>Slide2<br>Hidden Slide, should not be shown!</li>
+      <svg height="250" width="510">
+        <polygon points="220,10 300,210 200,245 123,234" style="fill:tomato;stroke:rebeccapurple;stroke-width:5" />
+        This is a fallback message. If you see this, your browser does not support inline SVG.
+      </svg>
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 300' width='600' height='300'%3E%3Crect width='600' height='300' fill='%2300a3d7'%3E%3C/rect%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='monospace' font-size='26px' fill='%23000000'%3Eimg%3C/text%3E%3C/svg%3E" alt="dummy image, says img on a blue background">
+      <li>Slide 3</li>
+      <li>Slide 5</li>
+      <li>Slide 6</li>
+    </ul>
+
+
+  <nav id="nav">
     <h2>Navigation</h2>
-    <ul class=lx-invert>
+    <ul>
       <li><a href="#sections">Sections</a></li>
       <li><a href="#grouping-content">Grouping content</a></li>
       <li><a href="#text-level-semantics">Text-level semantics</a></li>
@@ -338,6 +347,8 @@
       </header>
 
       <p>When citing creative work, include the reference with a <code>&lt;cite&gt;</code> element. <cite>www.w3.org</cite> explains that <q>A citation is not a quote (for which the <code>&lt;q&gt;</code> element is appropriate)</q> instead, like used here.</p>
+      <p lang=de>A Quote in germain <q>A germain quote</q> </p>
+      <p lang=fr>A Quote in french <q>A french quote</q> </p>
       <p>If you want to link content with a <data value="123">machine-readable</data> translation, use <code>&lt;data&gt;</code> with a <code>value</code> attribute. However, if this data is a time- or date-related, like the date <time datetime="2019-07-04">July 4</time>, you have to use <code>&lt;time&gt;</code> together with the <code>datatime</code> attribute.</p>
     </article>
 
@@ -348,8 +359,8 @@
 
       <p>When sharing code-snippets, make sure to use the <code>&lt;code&gt;</code> element. This can be done both <code>display: inline;</code>, as well as block-level:</p>
       <pre><code>* {
-color: rebeccapurple;
-background: aliceblue;
+  color: rebeccapurple;
+  background: aliceblue;
 }</code></pre>
       <p>Variables should be surrounded by <code>&lt;var&gt;</code>, or <var>x</var> amount of people might be confused.</p>
       <p>Sample or quotes output are represented with <code>&lt;samp&gt;</code>: <samp>Your expression '1 + 1' equals 2</samp>.</p>
@@ -788,27 +799,10 @@ background: aliceblue;
             </label>
           </p>
           <p>
-            <label for="input-submit">
-              Submit: <input type="submit" id="input-submit">
-            </label>
+            <button type="button">I'm a Button</button>
           </p>
           <p>
-            <label for="input-image">
-              Image button: <input type="image" id="input-image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 150 50' width='150' height='50'%3E%3Crect width='150' height='50' fill='%23cccccc'%3E%3C/rect%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' %3Ebutton%3C/text%3E%3C/svg%3E">
-            </label>
-          </p>
-          <p>
-            <label for="input-reset">
-              Reset: <input type="reset" id="input-reset">
-            </label>
-          </p>
-          <p>
-            <label for="input-button">
-              Button: <input type="button" id="input-button" value="I'm an input with type=button">
-            </label>
-          </p>
-          <p>
-            <button type="button">I'm a <code>&lt;button&gt;</code></button>
+            <button type="button" disabled>I'm a disabled Button</button>
           </p>
         </fieldset>
       </form>

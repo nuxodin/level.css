@@ -1,14 +1,18 @@
+:root {
+  --color-bg-orig:var(--color-bg);
+  --color-text-orig:var(--color-text);
+  --color-dark-orig:var(--color-dark);
+  --color-light-dark:var(--color-light);
+}
 .lx-invert {
+  --color-bg:var(--color-text-orig);
+  --color-text:var(--color-bg-orig);
 
-  --cb:var(--color-text);
-  --ct:var(--color-bg);
-
-  --color-bg:var(--cb);
-  --color-text:var(--ct);
+  --color-light:var(--color-dark-orig);
+  --color-dark:var(--color-light-orig);
 
   background-color:var(--color-bg);
   color:var(--color-text);
-
 
   padding:var(--gap);
 }

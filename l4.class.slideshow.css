@@ -1,0 +1,26 @@
+.lx-slideshow {
+	/* needed */
+	display:flex;
+	overflow:auto;
+	scroll-snap-type: x mandatory;
+	list-style:none; /* if its a list */
+	margin:0;
+	padding:0;
+	/* ok? */
+	align-items: stretch;
+}
+.lx-slideshow > * {
+	/* needed */
+	width:100%;
+	flex-shrink:0;
+	box-sizing:border-box;
+	position:relative;
+	scroll-snap-align: center;
+	/* ok */
+	text-align:center;
+	xheight:100%;
+	xdisplay:flex;
+	xalign-items:center;
+	xjustify-content: center;
+	xobject-fit: cover;
+}
