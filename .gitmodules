@@ -1,0 +1,18 @@
+[submodule "inspirations/cssTools_normalize.css"]
+	path = inspirations/cssTools_normalize.css
+	url = https://github.com/csstools/normalize.css
+[submodule "inspirations/sanizize.css"]
+	path = inspirations/sanizize.css
+	url = https://github.com/csstools/sanitize.css
+[submodule ".\\inspirations\\cssremedy"]
+	path = .\\inspirations\\cssremedy
+	url = https://github.com/jensimmons/cssremedy
+[submodule ".\\inspirations/opinionate.css"]
+	path = .\\inspirations/opinionate.css
+	url = https://github.com/adamgruber/opinionate.css
+[submodule ".\\inspirations/modern-normalize"]
+	path = .\\inspirations/modern-normalize
+	url = https://github.com/sindresorhus/modern-normalize
+[submodule ".\\inspirations/css-homogenizer"]
+	path = .\\inspirations/css-homogenizer
+	url = https://github.com/kripod/css-homogenizer
