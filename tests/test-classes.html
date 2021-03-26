@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Level.css TEST</title>
+  <script src="./test.js" type=module></script>
+
+  <link rel="stylesheet" href="../l1.normalize.css">
+  <link rel="stylesheet" href="../l2.recommend.css">
+  <link rel="stylesheet" href="../l3.variables.css">
+  <link rel="stylesheet" href="../l3.variables.more.css">
+  <link rel="stylesheet" href="../l4.classless.css" disabled>
+  <link rel="stylesheet" href="../l4.classless.more.css" disabled>
+  <link rel="stylesheet" href="../l5.classes.css" >
+  <link rel="stylesheet" href="../l5.nomotion.css" disabled>
+  <link rel="stylesheet" href="../l5.print.css" disabled>
+
+
+  <style>
+    xbody {
+      display: grid;
+      gap:1rem;
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    }
+    xbody > * {
+      background:#eee;
+    }
+    section {
+      padding:2rem;
+      background-color:#eee;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <section id=lx-width>
+    <h1>.lx-width</h1>
+    <div class=-viewport>
+      simulated viewport
+      <div class="lx-width">
+        <div>
+          <code>class="lx-width"</code>
+          <p>
+            This should be have with of --width<br>
+            using max-width</br>
+            Is is also horizontal centered </br>
+            And has a padding left and right </br>
+            box-sizing is explicit content-box
+          </p>
+        </div>
+      </div>
+      <br>
+      <div class="lx-width" style="max-width:40rem">
+        <code>class="lx-width"<br>
+        style="max-width:40rem"</code>
+        <div class="lx-width">
+          <h3>nested</h3>
+          <code>class="lx-width"</code>
+          <p>
+            This also has a with of --width<br>
+            But no more padding
+          </p>
+        </div>
+      </div>
+    </div>
+    <style>
+      #lx-width .-viewport {
+        --width:30rem;
+        overflow:hidden;
+        contain: paint;
+        margin:auto;
+        animation: lx-width 2s linear infinite alternate;
+      }
+      @keyframes lx-width {
+        0% {
+          max-width:calc(var(--width) + 30rem);
+        }
+        100% {
+          max-width:300px;
+        }
+      }
+      #lx-width div {
+        border:1px solid var(--color-dark);
+      }
+    </style>
+  </section>
+
+  <section>
+    <h1>.lx-invert</h1>
+    <div class="lx-invert lx-p">
+      <h2>Should be inverted</h2>
+      <p>Some Text in a Paragraph Some Text in a Paragraph Some Text in a ParagraphSome Text in a Paragraph Some</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>.lx-scrollabel - Fixes padding-bottom bug in scrollable areas, firefox</h2>
+    <div class=lx-scrollable style="max-height:200px; padding:30px; background:var(--color); box-sizing:border-box">
+      <div style="height:200px; background-color:var(--color-light)">
+        This div should have padding-bottom;
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>.lx-slideshow</h2>
+
+    <ul class="lx-slideshow" style="max-width:30em; margin:auto; background:var(--color-light)">
+      <li>Slide 1</li>
+      <li>Slide 2</li>
+      <li>Slide 3</li>
+      <li hidden>Slide2<br>Hidden Slide, should not be shown!</li>
+      <svg height="250" width="510">
+        <polygon points="220,10 300,210 200,245 123,234" style="fill:tomato; stroke:rebeccapurple; stroke-width:5" />
+        This is a fallback message. If you see this, your browser does not support inline SVG.
+      </svg>
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 300' width='600' height='300'%3E%3Crect width='600' height='300' fill='%2300a3d7'%3E%3C/rect%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='monospace' font-size='26px' fill='%23000000'%3Eimg%3C/text%3E%3C/svg%3E" alt="dummy image, says img on a blue background">
+      <li>Slide 3</li>
+      <li>Slide 5</li>
+      <li>Slide 6</li>
+    </ul>
+
+    <style>
+    .lx-slideshow {
+      xdisplay:flex;
+      xplace-items: center;
+    }
+    </style>
+
+  </section>
+
+
+  <section id=lx-flex>
+    <h2>.lx-flex (gap hack for safari)</h2>
+
+    <div style="border:1px solid red">
+      <div class=lx-flex style="border:1px solid #ddd;">
+        <div>Wrap by default</div>
+        <div>gap by default, ok?</div>
+        <div style="margin-left:auto">margin-left:auto, looses gap :(</div>
+      </div>
+    </div>
+
+    <style>
+      #lx-flex .lx-flex > *{
+        border:1px solid blue;
+        padding:10px;
+      }
+    </style>
+
+  </section>
+
+
+  <section id=lx-table>
+    <h2>.lx-table</h2>
+
+    <form class=lx-table>
+      <div>
+        <label>
+          <span>Firstname</span>
+          <div><input></div>
+        </label>
+        <label>
+          <span>Lastname</span>
+          <div><input></div>
+        </label>
+        <label>
+          <span>Note</span>
+          <div><textarea></textarea></div>
+        </label>
+        <div>
+          <span></span>
+          <div><button>send</button></div>
+        </div>
+      </div>
+    </form>
+
+    <style>
+      #lx-table .lx-table > * > * {
+        xvertical-align: top;
+      }
+    </style>
+
+  </section>
+
+
+  <section id=lx-badge>
+    <h2>.lx-badge</h2>
+
+    <h3>Using span</h3>
+    <div>
+      <span class=lx-badge>done</span>
+      <span class=lx-badge>todo</span>
+      <span class="lx-badge">warn</span>
+    </div>
+
+    <h3>Using small</h3>
+    <div>
+      <small class=lx-badge>done</small>
+      <small class=lx-badge>done</small>
+    </div>
+
+    <h3>Using sup</h3>
+    <p>
+      <sup class=lx-badge>pro tip ★</sup> show here
+    </p>
+    <p>
+      E-mails <sup class=lx-badge>3</sup>
+    </p>
+
+    <h3>Breaks</h3>
+    <p style="max-width:200px">
+      <small class=lx-badge>super long badge containing more words</small>
+    </p>
+
+
+  </section>
+
+
+
+
+
+  <div style="margin-bottom:500px"></div>

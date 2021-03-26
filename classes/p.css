@@ -1,0 +1,4 @@
+/* rename to lx-pad? */
+.lx-p {
+    padding:var(--gap);
+}

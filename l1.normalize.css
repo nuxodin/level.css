@@ -38,35 +38,14 @@ ul dl {
 }
 
 /**
- * Remove the margin on nested lists in Edge 18- and IE.
- */
-
-ol ol,
-ol ul,
-ul ol,
-ul ul {
-  margin: 0;
-}
-
-/**
  * 1. Add the correct box sizing in Firefox.
  * 2. Correct the inheritance of border color in Firefox.
- * 3. Show the overflow in Edge 18- and IE.
  */
 
 hr {
   box-sizing: content-box; /* 1 */
   color: inherit; /* 2 */
   height: 0; /* 1 */
-  overflow: visible; /* 3 */
-}
-
-/**
- * Add the correct display in IE.
- */
-
-main {
-  display: block;
 }
 
 /**
@@ -81,14 +60,6 @@ pre {
 
 /* Text-level semantics
  * ========================================================================== */
-
-/**
- * Remove the gray background on active links in IE 10.
- */
-
-a {
-  background-color: transparent;
-}
 
 /**
  * Add the correct text decoration in Edge 18-, IE, and Safari.
@@ -132,37 +103,12 @@ small {
  * ========================================================================== */
 
 /**
- * Add the correct display in IE 9-.
- */
-
-audio,
-video {
-  display: inline-block;
-}
-
-/**
  * Add the correct display in iOS 4-7.
  */
 
 audio:not([controls]) {
   display: none;
   height: 0;
-}
-
-/**
- * Remove the border on images within links in IE 10-.
- */
-
-img {
-  border-style: none;
-}
-
-/**
- * Hide the overflow in IE.
- */
-
-svg:not(:root) {
-  overflow: hidden;
 }
 
 /* Tabular data
@@ -192,12 +138,10 @@ select {
 }
 
 /**
- * 1. Show the overflow in IE.
  * 2. Remove the inheritance of text transform in Edge 18-, Firefox, and IE.
  */
 
 button {
-  overflow: visible; /* 1 */
   text-transform: none; /* 2 */
 }
 
@@ -213,33 +157,10 @@ button,
 }
 
 /**
- * Show the overflow in Edge 18- and IE.
- */
-
-input {
-  overflow: visible;
-}
-
-/**
- * 1. Correct the text wrapping in Edge 18- and IE.
- * 2. Correct the color inheritance from `fieldset` elements in IE.
- */
-
-legend {
-  box-sizing: border-box; /* 1 */
-  color: inherit; /* 2 */
-  display: table; /* 1 */
-  max-width: 100%; /* 1 */
-  white-space: normal; /* 1 */
-}
-
-/**
- * 1. Add the correct display in Edge 18- and IE.
  * 2. Add the correct vertical alignment in Chrome, Edge, and Firefox.
  */
 
 progress {
-  display: inline-block; /* 1 */
   vertical-align: baseline; /* 2 */
 }
 
@@ -253,23 +174,10 @@ select {
 
 /**
  * 1. Remove the margin in Firefox and Safari.
- * 2. Remove the default vertical scrollbar in IE.
  */
 
 textarea {
   margin: 0; /* 1 */
-  overflow: auto; /* 2 */
-}
-
-/**
- * 1. Add the correct box sizing in IE 10-.
- * 2. Remove the padding in IE 10-.
- */
-
-[type="checkbox"],
-[type="radio"] {
-  box-sizing: border-box; /* 1 */
-  padding: 0; /* 2 */
 }
 
 /**
@@ -343,17 +251,6 @@ textarea {
   box-shadow: none;
 }
 
-/* Interactive
- * ========================================================================== */
-
-/*
- * Add the correct display in Edge 18- and IE.
- */
-
-details {
-  display: block;
-}
-
 /*
  * Add the correct styles in Edge 18-, IE, and Safari.
  */
@@ -374,6 +271,7 @@ dialog {
   width: -moz-fit-content;
   width: -webkit-fit-content;
   width: fit-content;
+  xoverscroll-behavior: contain; /* or "none"? Prevent scroll chaning. -safari. ok? */
 }
 
 dialog:not([open]) {
@@ -386,34 +284,4 @@ dialog:not([open]) {
 
 summary {
   display: list-item;
-}
-
-/* Scripting
- * ========================================================================== */
-
-/**
- * Add the correct display in IE 9-.
- */
-
-canvas {
-  display: inline-block;
-}
-
-/**
- * Add the correct display in IE.
- */
-
-template {
-  display: none;
-}
-
-/* User interaction
- * ========================================================================== */
-
-/**
- * Add the correct display in IE 10-.
- */
-
-[hidden] {
-  display: none;
 }

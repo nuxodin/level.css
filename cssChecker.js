@@ -3,7 +3,11 @@ Array.from(document.styleSheets).forEach(checkStyleSheet);
 
 
 function checkStyleSheet(ss){
-    checkRules(ss.cssRules)
+    try {
+        checkRules(ss.cssRules)
+    } catch(e) {
+        console.warn('can not check '+ss.href, e)
+    }
 }
 function checkRules(rules){
     Array.from(rules).forEach(checkRule);
@@ -38,7 +42,7 @@ function checkStyle(style) {
         let value = style.getPropertyValue(prop)
         if (prop === 'line-height') {
             console.log(prop, value)
-            if (!value.match(/^([1-9.]+|inherit)$/)) {
+            if (!value.match(/^([0-9.]+|inherit)$/)) {
                 console.error('line-height should have no unit');
             }
         }

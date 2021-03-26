@@ -1,0 +1,207 @@
+/* https://dev.to/5t3ph/my-top-css-tips-as-shared-on-twitter-part-1-23e2 */
+/* https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/style.css */
+
+html {
+  background-color:var(--color-bg);
+  color:var(--color-text);
+
+	accent-color: var(--color); /* currently chromium canary */
+
+  font-family:var(--font);
+  font-size:calc(11px + .8vmin);
+  line-height:1.4;
+
+  -webkit-hyphens:auto;
+  hyphens:auto;
+
+  overflow-y: scroll; /* consistent y-scrollbar on all pages and on dynamic content */
+}
+body {
+  max-width:var(--width);
+  padding:var(--gap);
+
+  display: grid; /* center content. Margins will not collapse :/ */
+  place-content: center stretch;
+}
+a {
+  color:var(--color);
+  transition:color .2s;
+}
+a:visited {
+  color:var(--color-text);
+}
+a:hover ,
+a:focus {
+  color:var(--color-text);
+}
+a[download] ,
+a[target] {
+  text-decoration:none;
+}
+a[target]::after {
+  content: '🠆';
+  margin-left:.2em;
+}
+a[download]::after {
+  content: ' 🠇'; /* 🠇⤵↓ */
+  margin-left:.2em;
+}
+
+hr {
+  color:var(--color-light);
+  margin:calc(var(--gap) * 2) 0;
+}
+
+/*
+:is(h1,h2,h3,h4,h5,h6,p):first-child {
+  margin-top:0;
+}
+:is(h1,h2,h3,h4,h5,h6,p):last-child {
+  margin-bottom:0;
+}
+*/
+
+
+table {
+  width: 100%;
+}
+
+td, th {
+  padding: 0.5em;
+  padding: calc(var(--gap) / 2);
+  border-bottom: 1px solid var(--color-light);
+}
+
+:focus-visible {
+  outline: .15rem dashed var(--color-text);
+  outline-offset: .2rem;
+}
+:focus:not(:focus-visible) {
+  outline: 1px dashed;
+}
+
+blockquote {
+  margin:0;
+  padding: calc(var(--gap) / 2);
+  padding-left: var(--gap);
+  border-left: 5px solid var(--color);
+  background-color: var(--color-light);
+  border-radius:var(--radius);
+}
+
+pre {
+  background-color: var(--color-light);
+  padding: var(--gap);
+  overflow-x: auto;
+  border-radius:var(--radius);
+}
+
+code {
+  font-size: 0.9em;
+  padding: 0 0.5em;
+  background-color: var(--color-light);
+  white-space: pre-wrap;
+  box-decoration-break: clone;
+  line-height:1;
+}
+
+mark {
+  background-color: hsl(var(--hsl-h), calc(var(--hsl-s) * 3), 70%, 0.5);
+  padding:0 0.15em;
+}
+
+
+
+/* FORM */
+
+/* all inputs, buttons */
+input,
+textarea,
+select,
+button,
+::file-selector-button,
+::-webkit-file-upload-button {
+	box-sizing:border-box;
+	padding: .2em .4em;
+	font-size:.9rem;
+  font-family:var(--font);
+	max-width:100%; /* todo: neu ok?*/
+  xborder:1px solid;
+  border-radius:var(--radius);
+  /* min-height:1.3em; todo? for select, input same height in chrome, firefox has same height if they have borders? or line-height: 1.2;? line-height can not be set on select */
+}
+
+
+/* text-inputs */
+input,
+textarea {
+	width:15em;
+}
+[type=radio], [type=checkbox] {
+  width:auto;
+}
+
+/* file-input */
+[type=file] {
+  padding-top:0;
+  padding-bottom:0;
+  padding-left:0;
+  border:none;
+  background-color:var(--color-light);
+}
+
+/* buttons */
+button,
+::file-selector-button,
+::-webkit-file-upload-button {
+  transition:color .2s;
+  background-color:var(--color);
+  color:var(--color-bg);
+  border:none;
+  padding:.4em 1em;
+  transition:background-color .1s;
+}
+/* buttons hover */
+button:hover:not([disabled]),
+:hover::file-selector-button,
+:hover::-webkit-file-upload-button {
+  background-color:hsl(var(--hsl-h), var(--hsl-s),  calc(var(--hsl-s) * .5)  );
+  background-color:var(--color-dark);
+}
+/* buttons disabled */
+button[disabled] {
+  opacity:.5;
+}
+/* file-buttons */
+::file-selector-button,
+::-webkit-file-upload-button {
+  border-top-right-radius: 0; /* recheck: border-end-end-radius supported? (-safari) */
+  border-bottom-right-radius: 0;
+}
+
+
+
+
+
+
+figure {
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  padding:calc(var(--gap) / 4);
+  margin:calc(var(--gap) * 2) var(--gap);
+  font-size:1.2rem;
+  box-shadow:var(--shadow);
+  border-radius:var(--radius);
+}
+figure > img {
+  border-radius:var(--radius);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+figcaption {
+  opacity:.7;
+  font-size:.9rem;
+  font-style: italic;
+  text-align:center;
+}

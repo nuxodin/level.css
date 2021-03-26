@@ -1,0 +1,52 @@
+/****************/
+/* custom list  */
+/****************/
+
+/* ul li { list-style-type: "• "; } overwrites "nav li" because it cames after */
+/* ul li { list-style-type: "· "; } /* small dot */
+/* li::marker { content: "• "; } /* ::marker is bad, its shown even if list-style:none*/
+
+/*
+ul {
+	padding:0;
+	list-style:none;
+}
+ul > li {
+	padding-left: 1em;
+	background-repeat: no-repeat;
+	background-position: 0.3em 0.68em;
+
+	/* image *
+	background-image: url("/list-image.svg"); /* todo inline *
+	background-size: .2em auto;
+
+	/* radial gradient *
+	background-image: radial-gradient(currentColor, currentColor 50%, transparent 50%, transparent);
+	background-size: .4em .4em;
+    /* *
+}
+/* reset *
+.lx-rst ul {
+	padding-left: 1.6em;
+	list-style-type: disc;
+}
+.lx-rst ul li {
+	padding:0;
+	background-image:none;
+}
+
+/****************/
+/* custom select */
+/****************/
+select:not([size],[multiple]) {
+    -webkit-appearance:none;
+    appearance:none;
+    background-image:url(
+        "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2021.3%2012.1%22%20fill%3D%22%23333333%22%3E%3Cpath%20d%3D%22M10.7%2012.1L0%201.5%201.4.1l9.3%209.2L19.9%200l1.4%201.4z%22%2F%3E%3C%2Fsvg%3E"
+    );
+    background-repeat:no-repeat;
+    background-size:.8em .8em;
+    background-position:top 50% right .3em;
+    padding-right:1.5em;
+    xtext-overflow: ellipsis;
+}

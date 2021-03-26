@@ -1,0 +1,22 @@
+:root {
+    --gap:2rem;
+    --hsl-h: 188.9;
+    --hsl-s: 12%;
+    --hsl-l: 12%;
+    --radius:0;
+    --color-bg:#fff;
+    --color-text:#000;
+
+    font-weight:300;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight:300;
+}
+h1 {
+    font-size:2.7rem;
+}
+
+header {
+    box-shadow:var(--shadow);
+}

@@ -1,0 +1,19 @@
+.lx-table {
+    display:table;
+}
+.lx-table > * {
+    display:table-row-group;
+}
+.lx-table > * > * {
+    display:table-row;
+}
+.lx-table > * > * > * {
+    display:table-cell;
+    padding:calc(var(--gap) / 2); /* gap by default ?*/
+}
+/*
+.lx-table textarea {
+    /* display:block; makes chrome first-textarea-line as baseline; makes but removes this from firefox *
+    vertical-align: baseline;
+}
+*/

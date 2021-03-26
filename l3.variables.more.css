@@ -1,0 +1,29 @@
+:root {
+    /* function */
+    --hsl-2-h:calc(var(--hsl-h) + 120);
+    --color-2: hsl(var(--hsl-2-h), var(--hsl-s), var(--hsl-l));
+
+    --color-2-light: hsl(var(--hsl-2-h), var(--hsl-s), calc(var(--hsl-l) + (100% - var(--hsl-l)) * .9 ) );
+    --color-2-dark:  hsl(var(--hsl-2-h), var(--hsl-s), calc(var(--hsl-l) * .7 ) );
+
+    --color-area: var(--color-light);
+
+    /* named */
+    --color-red :     hsl(0deg,   var(--hsl-s), var(--hsl-l));
+    --color-orange :  hsl(30deg,  var(--hsl-s), var(--hsl-l));
+    --color-yellow :  hsl(60deg,  var(--hsl-s), var(--hsl-l));
+    --color-green :   hsl(120deg, var(--hsl-s), var(--hsl-l));
+    --color-cyan :    hsl(180deg, var(--hsl-s), var(--hsl-l));
+    --color-blue :    hsl(240deg, var(--hsl-s), var(--hsl-l));
+    --color-violet :  hsl(270deg, var(--hsl-s), var(--hsl-l));
+    --color-purple :  hsl(285deg, var(--hsl-s), var(--hsl-l));
+    --color-magenta : hsl(300deg, var(--hsl-s), var(--hsl-l));
+
+    --color-gray:       hsl(var(--hsl-h), 4%, 60%);
+    --color-gray-light: hsl(var(--hsl-h), 4%, 90%);
+    --color-gray-dark:  hsl(var(--hsl-h), 4%, 40%);
+
+    /* other */
+    --radius: .3rem;
+    --shadow: 0px .25rem .8rem -.25rem rgba(23, 23, 23, 0.35), 0px .25rem .5rem -.35rem rgba(23, 23, 23, 0.2);
+}

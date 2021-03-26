@@ -1,0 +1,11 @@
+.lx-flex {
+    display:flex;
+    flex-wrap:wrap;
+    --f-gap:var(--gap);
+    --f-row-gap:var(--f-gap);
+    --f-col-gap:var(--f-gap);
+    margin:calc( var(--f-row-gap) * -0.5 ) 0 calc( var(--f-row-gap) * -0.5 ) calc( var(--f-col-gap) * -1 ); /* important? */
+}
+.lx-flex > * {
+    margin:calc( var(--f-row-gap) / 2 ) 0 calc( var(--f-row-gap) / 2 ) var(--f-col-gap); /* important? */
+}

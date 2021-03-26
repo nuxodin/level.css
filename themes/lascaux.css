@@ -1,0 +1,10 @@
+:root {
+  --hsl-h: 321.3;
+  --hsl-s: 100%;
+  --hsl-l: 34.3%;
+
+  --color-light: rgb(229, 229, 229);
+
+  --color-bg: #fff;
+  --color-text: rgb(51, 51, 51);
+}

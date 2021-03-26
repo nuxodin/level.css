@@ -3,7 +3,6 @@
 	display:flex;
 	overflow:auto;
 	scroll-snap-type: x mandatory;
-	list-style:none; /* if its a list */
 	margin:0;
 	padding:0;
 	/* ok? */
@@ -16,6 +15,7 @@
 	box-sizing:border-box;
 	position:relative;
 	scroll-snap-align: center;
+	list-style:none; /* if its a list */
 	/* ok */
 	text-align:center;
 	xheight:100%;

@@ -1,28 +1,39 @@
 import './../cssChecker.js';
 
 let html = `
-<form id=testTools style="position:fixed; top:10px; right:10px; background:#fff; box-shadow:0 0 10px; font-size:15px; line-height:1.2; font-family:arial">
+<form id=testTools>
     <table>
         <tr>
             <td>Hue:
-            <td><input type=range name=h min=0 max=360>
+            <td><input type=range name=hsl-h unit="" min=0 max=360>
         <tr>
             <td>Saturation:
-            <td><input type=range name=s>
+            <td><input type=range name=hsl-s unit="%">
         <tr>
             <td>Lightness:
-            <td><input type=range name=l>
+            <td><input type=range name=hsl-l unit="%">
+        <tr>
+            <td>Radius:
+            <td><input type=range name=radius min=0 max=1 step=any unit="rem">
+        <tr>
+            <td>Gap:
+            <td><input type=range name=gap min=.5 max=4 step=any unit="rem">
     </table>
     <div class=Table id=tStyleSheets>
     </div>
 </form>
 
 <style>
+#testTools {
+    position:fixed; bottom:10px; right:10px; background:#fff; box-shadow:0 0 10px; font-size:15px; line-height:1.2; font-family:arial;
+    color:#000;
+}
 #testTools table,
 .Table {
     width:100%;
     display:table;
     border-collapse: collapse;
+    text-indent: 0;
 }
 .Table > * {
     display:table-row;
@@ -39,16 +50,27 @@ let html = `
     width:120px;
     padding:0;
 }
+#testTools input {
+    margin:0;
+}
 </style>
 `;
 
 document.body.insertAdjacentHTML('beforeend',html);
-
+const els = testTools.elements;
+function resetInputs(){
+    Array.from(els).forEach(el=>{
+        const style = getComputedStyle(document.documentElement);
+        let value = style.getPropertyValue('--'+el.name);
+        value = parseFloat(value);
+        el.value = value;
+    })
+}
+resetInputs();
 testTools.addEventListener('input', function(e){
-    const els = this.elements;
-    document.documentElement.style.setProperty('--hsl-h', els.h.value )
-    document.documentElement.style.setProperty('--hsl-s', els.s.value + '%')
-    document.documentElement.style.setProperty('--hsl-l', els.l.value + '%')
+    let el = e.target;
+    console.log(el)
+    document.documentElement.style.setProperty('--'+el.name, el.value + el.getAttribute('unit') )
 })
 testTools.contentEditable = false;
 
@@ -61,5 +83,6 @@ document.querySelectorAll('link[rel=stylesheet]').forEach(link=>{
     tStyleSheets.append(label);
     label.addEventListener('change',function(){
         link.disabled = !input.checked;
+        setTimeout(resetInputs,200)
     })
 })
