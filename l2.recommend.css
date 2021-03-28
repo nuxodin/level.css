@@ -70,14 +70,23 @@ button:not([disabled]),
     cursor:pointer;
 }
 
-input, textarea, select {
+input, textarea, select, button {
     padding:.2em;
-    box-sizing:border-box;
     border:1px solid rgba(0,0,0,.5);
+}
+input, textarea, select {
+    xpadding:.2em;
+    box-sizing:border-box;
+    xborder:1px solid rgba(0,0,0,.5);
     border-radius:0;
     font-size:inherit;
     line-height:1.3;
     font-family:inherit;
+}
+button {
+    padding-left:.5em;
+    padding-right:.5em;
+    xborder-color:transparent;
 }
 input, textarea {
     width:11rem;

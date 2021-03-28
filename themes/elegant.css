@@ -17,6 +17,12 @@ h1 {
     font-size:2.7rem;
 }
 
+hr {
+    width: calc(var(--width) / 2);
+    margin-left:auto;
+    margin-right:auto;
+}
+
 header {
     box-shadow:var(--shadow);
 }

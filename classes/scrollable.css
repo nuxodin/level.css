@@ -1,7 +1,7 @@
 .lx-scrollable {
     overflow-x:auto;
 }
-/* fix ff padding-bottm bug (fixed in ff 89?) */
+/* fix ff padding-bottm bug (fixed in ff 89!) *
 @-moz-document url-prefix() {
     .lx-scrollable::after {
         content:'';
@@ -9,3 +9,4 @@
         padding-block-end:inherit;
     }
 }
+*/

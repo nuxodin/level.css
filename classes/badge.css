@@ -3,7 +3,10 @@
     color:var(--color-bg);
     display:inline-flex;
     padding:.2em .6em .2em .6em;
-    border-radius:.3em;
+    border-radius:.7em;
     line-height:1.1;
 	xbox-decoration-break:clone; /* not needed for inlin-flex */
+    xvertical-align:middle;
+    xmargin-bottom:-.1em;
+    xmargin-top:-.1em;
 }

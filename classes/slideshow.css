@@ -11,12 +11,13 @@
 .lx-slideshow > * {
 	/* needed */
 	width:100%;
-	flex-shrink:0;
 	box-sizing:border-box;
+	flex-shrink:0;
 	position:relative;
 	scroll-snap-align: center;
 	list-style:none; /* if its a list */
 	/* ok */
+	height:100%; /* vertical mode (needs height and flex-direction:column set on the slideshow) */
 	text-align:center;
 	xheight:100%;
 	xdisplay:flex;
