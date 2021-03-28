@@ -73,11 +73,13 @@ td, th {
 }
 
 :focus-visible {
-  outline: .15rem dashed var(--color-text);
-  outline-offset: .2rem;
+  xoutline: .15rem dashed var(--color-text);
+  outline: 1px dashed var(--color-text);
+  outline-offset: .1rem;
 }
 :focus:not(:focus-visible) {
   outline: 1px dashed;
+  outline-width: 0;
 }
 
 blockquote {
@@ -106,10 +108,13 @@ code {
 }
 
 mark {
-  background-color: hsl(var(--hsl-h), calc(var(--hsl-s) * 3), 70%, 0.5);
+  background-color: hsl(var(--hsl-h), calc(var(--hsl-s) * 4), 70%, 0.5);
+  background-color: hsl(var(--hsl-h), 100%, 70%, 0.5);
   padding:0 0.15em;
 }
-
+table {
+  font-size:.8rem;
+}
 
 
 /* FORM */
@@ -170,7 +175,7 @@ button:hover:not([disabled]),
 }
 /* buttons disabled */
 button[disabled] {
-  opacity:.5;
+    opacity:.5;
 }
 /* file-buttons */
 ::file-selector-button,
@@ -178,8 +183,6 @@ button[disabled] {
   border-top-right-radius: 0; /* recheck: border-end-end-radius supported? (-safari) */
   border-bottom-right-radius: 0;
 }
-
-
 
 
 

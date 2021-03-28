@@ -11,3 +11,11 @@
     padding-left:0;
     padding-right:0;
 }
+
+/*
+tailwind: .w-full
+*/
+.lx-width-full {
+    width:100%;
+    box-sizing: border-box;
+}

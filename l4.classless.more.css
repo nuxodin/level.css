@@ -50,3 +50,53 @@ select:not([size],[multiple]) {
     padding-right:1.5em;
     xtext-overflow: ellipsis;
 }
+
+
+
+/***************************/
+/* custom check-/radiobox */
+/***************************/
+[type=radio],
+[type=checkbox] {
+	-webkit-appearance: none;
+	appearance: none;
+}
+[type=radio],
+[type=checkbox] {
+	width: .9em;
+	height: .9em;
+	background-color:#fff;
+	border: solid 1px;
+	position: relative;
+	border-radius:3px;
+	box-sizing: border-box;
+}
+[type=radio]:checked,
+[type=checkbox]:checked {
+	border-color:var(--color, blue);
+}
+[type=radio]:checked::before,
+[type=checkbox]:checked::before {
+	xbox-sizing: border-box;
+	content: "";
+	background-color:var(--color, blue);
+	position: absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+}
+/* radio */
+[type=radio] {
+	border-radius: 100%;
+}
+[type=radio]::before {
+	border-radius:inherit;
+	border:2px solid #fff;;
+}
+/* disabled */
+[type=radio][disabled],
+[type=checkbox][disabled] {
+	opacity:.5;
+}
+/* todo indeterminate */

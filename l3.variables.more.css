@@ -3,8 +3,8 @@
     --hsl-h-2:calc(var(--hsl-h) + 120);
     --hsl-s-2:var(--hsl-s);
     --hsl-l-2:var(--hsl-l);
-    --color-2: hsl(var(--hsl-h-2), var(--hsl-s-2), var(--hsl-l-2));
 
+    --color-2: hsl(var(--hsl-h-2), var(--hsl-s-2), var(--hsl-l-2));
     --color-2-light: hsl(var(--hsl-h-2), var(--hsl-s-2), calc(var(--hsl-l-2) + (100% - var(--hsl-l-2)) * .9 ) );
     --color-2-dark:  hsl(var(--hsl-h-2), var(--hsl-s-2), calc(var(--hsl-l-2) * .7 ) );
 
