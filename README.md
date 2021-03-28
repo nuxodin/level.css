@@ -2,7 +2,16 @@
 
 Welcome to level.css a new CSS library.
 
-## inspiration
+## Inspiration
+
+### Style-Systems
+
+https://component.gallery/
+
+https://open-ui.org/
+
+
+### Normalize
 This library is inspired by this other libraries
 
 https://github.com/csstools/normalize.css
