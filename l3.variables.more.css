@@ -10,7 +10,7 @@
 
     --color-area: var(--color-light);
 
-    /* named */
+    /* named *
     --color-red :     hsl(0deg,   var(--hsl-s), var(--hsl-l));
     --color-orange :  hsl(30deg,  var(--hsl-s), var(--hsl-l));
     --color-yellow :  hsl(60deg,  var(--hsl-s), var(--hsl-l));
@@ -24,6 +24,12 @@
     --color-gray:       hsl(var(--hsl-h), 4%, 60%);
     --color-gray-light: hsl(var(--hsl-h), 4%, 90%);
     --color-gray-dark:  hsl(var(--hsl-h), 4%, 40%);
+
+    /* semantic *
+    --color-info:var(--color-green);
+    --color-warn:var(--color-orange);
+    --color-danger:var(--color-red);
+    /* */
 
     /* other */
     --radius: .3rem;

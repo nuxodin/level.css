@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Level.css TEST</title>
+
+  <meta name="viewport" content="width=device-width">
   <script src="./test.js" type=module></script>
 
   <link rel="stylesheet" href="../l1.normalize.css">
@@ -14,8 +16,78 @@
   <link rel="stylesheet" href="../l5.classes.css">
   <link rel="stylesheet" href="../l5.nomotion.css">
   <link rel="stylesheet" href="../themes/elegant.css" disabled>
+  <link rel="stylesheet" href="../themes/brutalist.css" disabled>
   <link rel="stylesheet" href="../themes/lascaux.css">
   <link rel="stylesheet" href="../l5.print.css" disabled>
+
+
+
+
+  <style>
+    body {
+        padding:0;
+        max-width:none;
+    }
+
+    body > header {
+        position:sticky;
+        top:0;
+        left:0;
+        right:0;
+        background-color:#fffb;
+    }
+    body > header .lx-width {
+        display:flex;
+        gap:1rem;
+        flex-wrap:wrap;
+        justify-content: space-between;
+        align-items:baseline;
+        margin-top:1rem;
+        margin-bottom:1rem;
+    }
+    body > header .lx-width > * {
+        margin:0;
+    }
+    body > header .lx-width > h1 {
+        margin:auto;
+    }
+    body > header nav li {
+        position:relative;
+        white-space:nowrap;
+        background:var(--color);
+        color:var(--color-light);
+    }
+    body > header nav > ul {
+        display:flex;
+        flex-wrap:wrap;
+        gap:1rem;
+        margin:0;
+    }
+    body > header nav ul ul {
+        position:absolute;
+        display:none;
+    }
+    body > header nav li:hover > ul {
+        display:block;
+    }
+    body > header nav ul {
+        padding:0;
+    }
+    body > header nav a {
+        color:inherit;
+        padding:.2rem .5rem;
+        display:inline-block;
+    }
+    body > footer {
+        background-color:var(--color-dark);
+        color:var(--color-bg);
+        padding-top:2em;
+        padding-bottom:2em;
+    }
+    body > footer a {
+        color:inherit;
+    }
+    </style>
 
 </head>
 <body id=body>
@@ -54,70 +126,7 @@
     </div>
 </header>
 
-<style>
-body {
-    padding:0;
-    max-width:none;
-}
 
-header {
-    position:sticky;
-    top:0;
-    left:0;
-    right:0;
-    background-color:#fffb;
-}
-header .lx-width {
-    display:flex;
-    gap:1rem;
-    flex-wrap:wrap;
-    justify-content: space-between;
-    align-items:baseline;
-    margin-top:1rem;
-    margin-bottom:1rem;
-}
-header .lx-width > * {
-    margin:0;
-}
-header .lx-width > h1 {
-    margin:auto;
-}
-header nav li {
-    position:relative;
-    white-space:nowrap;
-    background:var(--color);
-    color:var(--color-light);
-}
-header nav > ul {
-    display:flex;
-    gap:1rem;
-    margin:0;
-}
-header nav ul ul {
-    position:absolute;
-    display:none;
-}
-header nav li:hover > ul {
-    display:block;
-}
-header nav ul {
-    padding:0;
-}
-header nav a {
-    color:inherit;
-    padding:.2rem .5rem;
-    display:inline-block;
-}
-footer {
-    background-color:var(--color-dark);
-    color:var(--color-bg);
-    padding-top:2em;
-    padding-bottom:2em;
-}
-footer a {
-    color:inherit;
-}
-</style>
 
 <main id="main" class="lx-width">
     <h1>The Content</h1>
@@ -127,23 +136,80 @@ footer a {
     <p>Completely exploit competitive schemas before ubiquitous opportunities. Enthusiastically innovate timely partnerships with worldwide infrastructures. Interactively fabricate diverse infrastructures without client-centric leadership skills. Dynamically productivate progressive users before economically sound total linkage. Intrinsicly fashion extensible users rather than next-generation niches.</p>
 
     <hr>
+
     <p>Conveniently create go forward channels for intuitive process improvements. Globally repurpose cutting-edge information with visionary architectures. Conveniently expedite robust catalysts for change without excellent data. Appropriately evisculate principle-centered schemas after high-payoff intellectual capital. Objectively synergize empowered outsourcing vis-a-vis distributed total linkage.</p>
 
     <p>Synergistically productivate virtual infrastructures and team building methods of empowerment. Assertively visualize resource sucking opportunities through performance based process improvements. Authoritatively utilize value-added human capital with timely relationships. Appropriately extend market positioning outsourcing whereas corporate markets. Compellingly synthesize user friendly expertise without synergistic e-tailers.</p>
 
-    <h2>The Content</h2>
+    <h2>Some more Content</h2>
     <p>Continually deliver synergistic intellectual capital after fully tested networks. Dramatically brand cost effective testing procedures without intermandated outsourcing. Authoritatively grow transparent markets via goal-oriented initiatives. Completely monetize collaborative e-business and transparent alignments. Efficiently implement superior infomediaries rather than magnetic paradigms.</p>
 
     <p>Continually cultivate 2.0 action items through compelling action items. Distinctively grow pandemic alignments through cross-media products. Interactively generate cutting-edge models vis-a-vis vertical vortals. Synergistically restore enterprise-wide materials through holistic leadership. Competently.</p>
+
+    <section class="lx-flex-gap" style="flex-wrap:wrap">
+        <div class=lx-card>
+            <img src="https://loremflickr.com/640/360" width="320" height="180" alt="">
+            <div class="-body lx-flex-col">
+                <div class="lx-p lx-grow">
+                    <h3>Card 1</h3>
+                    <p>Tempore atque voluptatem repellat nostrum ipsam!</p>
+                </div>
+                <footer class="lx-p">
+                    <button>Go there</button>
+                    <button>Share</button>
+                </footer>
+            </div>
+        </div>
+        <div class=lx-card>
+            <img src="https://loremflickr.com/640/360?x=1" width="320" height="180" alt="">
+            <div class="-body lx-flex-col">
+                <div class="lx-p lx-grow">
+                    <h3>Card 1</h3>
+                    <p>Quam magni ea tempore corporis mollitia perferendis.</p>
+                </div>
+                <footer class=lx-p>
+                    <button>Go there</button>
+                </footer>
+            </div>
+        </div>
+    </section>
+
+<style>
+</style>
+
 
     <figure>
         <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 300' width='600' height='300'%3E%3Crect width='600' height='300' fill='%2300a3d7'%3E%3C/rect%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='monospace' font-size='26px' fill='%23000000'%3Eimg%3C/text%3E%3C/svg%3E" alt="Dummy image, just says img on a blue background">
         <figcaption>Dummy img generated by <a href="https://codepen.io/andreasnylin/full/PgGxQv">SVG Placeholder Image Generator</a></figcaption>
     </figure>
 
+    <form class=lx-table>
+        <div>
+            <label>
+                <span>Firstname</span>
+                <span><input type="text"></span>
+            </label>
+            <label>
+                <span>Lastname</span>
+                <span><input type="text"></span>
+            </label>
+            <label>
+                <span>Textfield</span>
+                <span><textarea></textarea></span>
+            </label>
+            <label>
+                <span>Agbs accepted</span>
+                <span><input type=checkbox required></span>
+            </label>
+            <label>
+                <span></span>
+                <span><button class=lx-width-full>Send it!</button></span>
+            </label>
+        <div>
+    </form>
 </main>
 
-<footer>
+<footer style="margin-bottom:50vh">
     <div class=lx-width>
         <p><a href="https://github.com/alexandersandberg/html5-elements-tester">HTML5 elements tester</a> by <a href="https://alexandersandberg.com">Alexander Sandberg</a> · <a href="#body">Back to top</a></p>
     </div>

@@ -2,3 +2,10 @@
 .lx-p {
     padding:var(--gap);
 }
+
+.lx-p :first-child {
+    margin-top:0;
+}
+.lx-p :last-child {
+    margin-bottom:0;
+}

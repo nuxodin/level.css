@@ -77,20 +77,22 @@ button:not([disabled]),
 input, textarea, select, button {
     padding:.2em;
     border:1px solid rgba(0,0,0,.5);
+    font-family: inherit;
+    font-size: inherit;
+    line-height:1.3;
+    xline-height: inherit;
+    box-sizing:border-box;
 }
 input, textarea, select {
     xpadding:.2em;
-    box-sizing:border-box;
     xborder:1px solid rgba(0,0,0,.5);
     border-radius:0;
-    font-size:inherit;
     line-height:1.3;
     font-family:inherit;
 }
 button {
     padding-left:.5em;
     padding-right:.5em;
-    xborder-color:transparent;
 }
 input, textarea {
     width:11rem;
@@ -107,3 +109,13 @@ todo[type=time]
 {
     width:auto;
 }
+
+
+
+/* beta */
+textarea {
+    vertical-align: baseline;
+    vertical-align: -webkit-baseline-middle;
+    xdisplay: inline-table; /* chrome makes align with the first line, but unresizable */
+}
+/**/

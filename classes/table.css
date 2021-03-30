@@ -11,6 +11,11 @@
     display:table-cell;
     padding:calc(var(--gap) / 2); /* gap by default ?*/
 }
+
+
+
+
+
 /*
 .lx-table textarea {
     /* display:block; makes chrome first-textarea-line as baseline; makes but removes this from firefox *

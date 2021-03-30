@@ -8,7 +8,7 @@ html {
 	accent-color: var(--color); /* currently chromium canary */
 
   font-family:var(--font);
-  font-size:calc(11px + .8vmin);
+  font-size:calc(13px + .7vmin);
   line-height:1.4;
 
   -webkit-hyphens:auto;
@@ -162,8 +162,9 @@ button,
   transition:color .2s;
   background-color:var(--color);
   color:var(--color-bg);
-  border:none;
-  padding:.4em 1em;
+  border-color:transparent;
+  padding-left:1em;
+  padding-right:1em;
   transition:background-color .1s;
 }
 /* buttons hover */

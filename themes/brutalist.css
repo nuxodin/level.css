@@ -1,0 +1,30 @@
+
+:root {
+    --hsl-h:180;
+    --hsl-s:90%;
+    --hsl-l:50%;
+    --radius:0;
+
+    --color-bg:#fff;
+    --color-text:#000;
+    --shadow: .2em .2em 0px var(--color-2);
+    --font:monospace;
+}
+button {
+    box-shadow:.2em .2em 0px var(--color-2);
+}
+h1, h2, h3, h4, h5, h6 {
+    color:var(--color);
+    text-transform: uppercase;
+    text-shadow:.1em .1em 0px var(--color-2);
+    letter-spacing:.1em;
+    font-weight:700;
+}
+input, textarea, select, button {
+    border-color:#000;
+    border-width:.15rem;
+    padding:.5rem 1rem;
+}
+hr {
+    border-bottom:.16rem solid black;
+}

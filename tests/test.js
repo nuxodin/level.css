@@ -21,12 +21,17 @@ let html = `
     </table>
     <div class=Table id=tStyleSheets>
     </div>
+    <span style="font-size:2em; position:absolute; right:0; bottom:0" onclick="this.closest('#testTools').classList.toggle('-Mini')">🡙</span>
 </form>
 
 <style>
 #testTools {
     position:fixed; bottom:10px; right:10px; background:#fff; box-shadow:0 0 10px; font-size:15px; line-height:1.2; font-family:arial;
     color:#000;
+}
+#testTools.-Mini {
+    height:40px;
+    overflow:hidden;
 }
 #testTools table,
 .Table {

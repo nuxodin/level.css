@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Level.css TEST</title>
+
+  <meta name="viewport" content="width=device-width">
   <script src="./test.js" type=module></script>
 
   <link rel="stylesheet" href="../l1.normalize.css">
@@ -132,11 +134,11 @@
   </section>
 
 
-  <section id=lx-flex>
-    <h2>.lx-flex (gap hack for safari)</h2>
+  <section id=lx-flex-gap>
+    <h2>.lx-flex-gap (gap hack for safari)</h2>
 
     <div style="border:1px solid red">
-      <div class=lx-flex style="border:1px solid #ddd;">
+      <div class=lx-flex-gap style="border:1px solid #ddd;">
         <div>Wrap by default</div>
         <div>gap by default, ok?</div>
         <div style="margin-left:auto">margin-left:auto, looses gap :(</div>
@@ -144,7 +146,7 @@
     </div>
 
     <style>
-      #lx-flex .lx-flex > *{
+      #lx-flex-gap .lx-flex-gap > *{
         border:1px solid blue;
         padding:10px;
       }
@@ -233,6 +235,7 @@
 
 
   </section>
+
 
 
 

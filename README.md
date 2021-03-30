@@ -12,6 +12,7 @@ https://component.gallery/
 
 https://open-ui.org/
 
+https://adele.uxpin.com/
 
 ### Normalize
 This library is inspired by this other libraries
