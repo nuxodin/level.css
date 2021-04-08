@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Level.css TEST</title>
+  <script src="./test.js" type=module></script>
+
+  <link rel="stylesheet" href="../l1.normalize.css">
+  <link rel="stylesheet" href="../l2.recommend.css">
+  <link rel="stylesheet" href="../l3.variables.css">
+  <link rel="stylesheet" href="../l3.variables.more.css">
+  <link rel="stylesheet" href="../l4.classless.css">
+  <link rel="stylesheet" href="../l4.classless.aria.css">
+  <link rel="stylesheet" href="../l4.classless.more.css">
+  <link rel="stylesheet" href="../l5.nomotion.css" disabled>
+  <link rel="stylesheet" href="../l5.print.css" disabled>
+
+
+  <style>
+    body {
+      padding:2rem;
+      display: grid;
+      gap:1rem;
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    }
+    body > * {
+      padding:1rem;
+      background:#eee;
+    }
+  </style>
+
+</head>
+
+<body>
+
+<section>
+  <h1>[aria-label]</h1>
+
+  <button aria-label="Use all the advantages of registration">
+    Register
+  </button>
+
+  <button aria-label="Close">x</button>
+
+  <p>Dont use aria-label on input/textarea elements directly, use the label element</p>
+
+  <label aria-label="Chick this!" style="display:block;">
+    <input type=checkbox>
+  </label>
+
+  <label aria-label="Write something" style="display:block;">
+    <textarea>Lorem Ipsum..</textarea>
+  </label>
+
+  <nav>
+    <ul>
+      <li><a href="#" aria-label="Go home">Home</li></a>
+      <li><a href="#" aria-label="About our Products">Products</a>
+      <li><a href="#" aria-label="Make money by getting a Reseller">Resseller</a>
+    </ul>
+  </label>
+
+</section>
+
+
+
+<section>
+  <h1>Tabs</h1>
+  <p>[aria-tablist], [role=tab], [role=tabpanel]</p>
+  <div class=tabs>
+    <div role=tablist aria-label="Sample Tabs">
+      <button role=tab aria-selected=true  aria-controls="panel-1" id="tab-1" js-will-do-tabindex="0">First Tab</button>
+      <button role=tab aria-selected=false aria-controls="panel-2" id="tab-2" js-will-do-tabindex="-1">Second Tab</button>
+      <button role=tab aria-selected=false aria-controls="panel-3" id="tab-3" js-will-do-tabindex="-1">Third Tab</button>
+    </div>
+    <div id="panel-1" role=tabpanel tabindex="0" js-will-do-aria-labelledby="tab-1">
+      <p>Content for the first panel</p>
+    </div>
+    <div id="panel-2" role=tabpanel tabindex="0" js-will-do-aria-labelledby="tab-2" js-will-do-hidden>
+      <p>Content for the second panel</p>
+    </div>
+    <div id="panel-3" role=tabpanel tabindex="0" js-will-do-aria-labelledby="tab-3" js-will-do-hidden>
+      <p>Content for the third panel</p>
+    </div>
+  </div>
+
+  <h3>tablist-overflows</h3>
+  <div class=tabs>
+    <div role=tablist aria-label="Sample Tabs">
+      <button role=tab aria-selected=true  aria-controls="panel-1"  id="tab-1" tabindex="0">First Tab</button>
+      <button role=tab aria-selected=false aria-controls="panel-2" id="tab-2" tabindex="-1">Second Tab</button>
+      <button role=tab aria-selected=false aria-controls="panel-3" id="tab-3" tabindex="-1">Third Tab</button>
+      <button role=tab aria-selected=false aria-controls="panel-4" id="tab-4" tabindex="-1">Third Tab</button>
+      <button role=tab aria-selected=false aria-controls="panel-5" id="tab-5" tabindex="-1">Third Tab</button>
+      <button role=tab aria-selected=false aria-controls="panel-6" id="tab-6" tabindex="-1">Third Tab</button>
+    </div>
+    <div id="panel-1" role=tabpanel tabindex="0" aria-labelledby="tab-1">
+      <p>Content for the first panel</p>
+    </div>
+  </div>
+</section>

@@ -73,12 +73,10 @@ td, th {
 }
 
 :focus-visible {
-  xoutline: .15rem dashed var(--color-text);
-  outline: 1px dashed var(--color-text);
-  outline-offset: .1rem;
+  outline: .16em dotted var(--color-text);
+  outline-offset: .25rem;
 }
 :focus:not(:focus-visible) {
-  outline: 1px dashed;
   outline-width: 0;
 }
 
@@ -180,7 +178,10 @@ button[disabled] {
 }
 /* file-buttons */
 ::file-selector-button,
-::-webkit-file-upload-button {
+::-webkit-file-upload-button,
+select[size], /* chrome */
+select[multiple] /* chrome */
+{
   border-top-right-radius: 0; /* recheck: border-end-end-radius supported? (-safari) */
   border-bottom-right-radius: 0;
 }

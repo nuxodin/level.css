@@ -24,19 +24,20 @@
 
 
   <style>
+
     body {
         padding:0;
         max-width:none;
     }
 
-    body > header {
+    :not(section) > header {
         position:sticky;
         top:0;
         left:0;
         right:0;
         background-color:#fffb;
     }
-    body > header .lx-width {
+    :not(section) > header .lx-width {
         display:flex;
         gap:1rem;
         flex-wrap:wrap;
@@ -45,46 +46,47 @@
         margin-top:1rem;
         margin-bottom:1rem;
     }
-    body > header .lx-width > * {
+    :not(section) > header .lx-width > * {
         margin:0;
     }
-    body > header .lx-width > h1 {
+    :not(section) > header .lx-width > h1 {
         margin:auto;
     }
-    body > header nav li {
+    :not(section) > header nav li {
         position:relative;
         white-space:nowrap;
         background:var(--color);
         color:var(--color-light);
     }
-    body > header nav > ul {
+    :not(section) > header nav > ul {
         display:flex;
         flex-wrap:wrap;
         gap:1rem;
         margin:0;
     }
-    body > header nav ul ul {
+    :not(section) > header nav ul ul {
         position:absolute;
         display:none;
     }
-    body > header nav li:hover > ul {
+    :not(section) > header nav li:focus-within > ul ,
+    :not(section) > header nav li:hover > ul {
         display:block;
     }
-    body > header nav ul {
+    :not(section) > header nav ul {
         padding:0;
     }
-    body > header nav a {
+    :not(section) > header nav a {
         color:inherit;
         padding:.2rem .5rem;
         display:inline-block;
     }
-    body > footer {
+    :not(section) > footer {
         background-color:var(--color-dark);
         color:var(--color-bg);
         padding-top:2em;
         padding-bottom:2em;
     }
-    body > footer a {
+    :not(section) > footer a {
         color:inherit;
     }
     </style>
@@ -147,6 +149,7 @@
     <p>Continually cultivate 2.0 action items through compelling action items. Distinctively grow pandemic alignments through cross-media products. Interactively generate cutting-edge models vis-a-vis vertical vortals. Synergistically restore enterprise-wide materials through holistic leadership. Competently.</p>
 
     <section class="lx-flex-gap" style="flex-wrap:wrap">
+        <header>test</header>
         <div class=lx-card>
             <img src="https://loremflickr.com/640/360" width="320" height="180" alt="">
             <div class="-body lx-flex-col">

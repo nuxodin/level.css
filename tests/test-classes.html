@@ -232,11 +232,39 @@
         <sup class=lx-badge>5</sup>
       </h1>
     </p>
-
-
   </section>
 
+  <section id=visually-hidden>
+    <h2>.visually-hidden</h2>
 
+    <div class=-wrapper style="overflow:auto">
+      <div>following content visible only by screen-readers:</div>
+      <div class=visually-hidden>
+        Can you hear me? Yes but you can not see me!
+        <a href="#">link</a>
+      </div>
+      <div>And more text</div>
+    </div>
+    <button>can i be clicked?</button>
+    <style>
+      #visually-hidden .visually-hidden:hover {
+        background:red;
+      }
+      #visually-hidden .-wrapper {
+        display:flex;
+      }
+      #visually-hidden .-wrapper > * {
+        background:yellow;
+        border:2px solid red;
+        position:static;
+      }
+      #visually-hidden .visually-hidden {
+        padding:200px;
+        border:100px solid red;
+        background:red;
+      }
+
+  </section>
 
 
 

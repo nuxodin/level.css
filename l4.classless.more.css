@@ -1,7 +1,6 @@
 /****************/
 /* custom list  */
 /****************/
-
 /* ul li { list-style-type: "• "; } overwrites "nav li" because it cames after */
 /* ul li { list-style-type: "· "; } /* small dot */
 /* li::marker { content: "• "; } /* ::marker is bad, its shown even if list-style:none*/
@@ -52,9 +51,8 @@ select:not([size],[multiple]) {
 }
 
 
-
 /***************************/
-/* custom check-/radiobox */
+/* custom check-/radiobox  */
 /***************************/
 [type=radio],
 [type=checkbox] {
@@ -68,7 +66,7 @@ select:not([size],[multiple]) {
 	background-color:#fff;
 	border: solid 1px;
 	position: relative;
-	border-radius:3px;
+	border-radius:.15em;
 	box-sizing: border-box;
 	padding:0;
 }
@@ -76,46 +74,52 @@ select:not([size],[multiple]) {
 [type=checkbox]:checked {
 	border-color:var(--color, blue);
 }
-[type=radio]:checked::before,
-[type=checkbox]:checked::before {
+[type=radio]::before ,
+[type=checkbox]::before {
 	content: "";
-	background-color:var(--color, blue);
 	position: absolute;
 	top:0;
 	left:0;
 	right:0;
 	bottom:0;
 	display:flex;
-	place-items: center;
+	align-items:center;
+	justify-content: center;
 	color:#fff;
-	line-height:1;
+	font-size:.9em;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:normal;
+	xoverflow:hidden;
+	font-size:.9em;
+}
+[type=radio]:checked::before ,
+[type=checkbox]:checked::before {
+	background-color:var(--color, blue);
 }
 /* checkbox */
 [type=checkbox]:checked::before {
 	content: "✔";
-	font-size:.9em;
-	font-family:Arial, Helvetica, sans-serif;
 }
-
-
 /* radio */
 [type=radio] {
 	border-radius: 100%;
 }
 [type=radio]::before {
 	border-radius:inherit;
-	border:2px solid #fff;;
+	border:.15em solid #fff;;
 }
 /* disabled */
 [type=radio][disabled],
 [type=checkbox][disabled] {
 	opacity:.5;
 }
-/* todo indeterminate */
-
-
-
-
+/* indeterminate */
+[type=radio]:indeterminate::before,
+[type=checkbox]:indeterminate::before {
+	color:currentColor;
+	font-size:.8em;
+	content: "─";
+}
 /*
 	indicator (beta)
 	z-index can not be behinde checkbox, only behinde ::before
@@ -133,3 +137,110 @@ select:not([size],[multiple]) {
 :is([type=radio], [type=checkbox]):hover::after {
 	background-color:#0001;
 }
+
+
+/***************************/
+/* color input             */
+/***************************/
+[type=color] {
+	padding: 0;
+	border-radius: 100%;
+	width: 1.4em;
+	height: 1.4em;
+	border-width:1px;
+	overflow: hidden;
+	box-shadow:0 0 .5em #0003;
+	cursor:pointer;
+}
+[type=color]::-moz-color-swatch {
+	border:none;
+}
+[type=color]::-webkit-color-swatch {
+	border:none;
+}
+[type=color]::-webkit-color-swatch-wrapper {
+	padding:0;
+}
+
+
+/***************************/
+/* scrollbars              */
+/***************************/
+:root {
+	--scrollbar-width-unit: .7rem;
+	--scrollbar-width: normal;
+	--scrollbar-color-track: var(--color-light);
+	--scrollbar-color-thumb: var(--color);
+}
+* {
+	scrollbar-width: var(--scrollbar-width);
+	scrollbar-color: var(--scrollbar-color-thumb) var(--scrollbar-color-track);
+}
+*::-webkit-scrollbar {
+	width: var(--scrollbar-width-unit);
+	height: var(--scrollbar-width-unit);
+}
+*::-webkit-scrollbar-track {
+	background: var(--scrollbar-color-track);
+}
+*::-webkit-scrollbar-thumb {
+	background-color: var(--scrollbar-color-thumb);
+}
+/* select */
+select, textarea {
+	--scrollbar-width-unit: .4rem;
+	--scrollbar-width: thin;
+}
+
+
+
+/***************************/
+/* range inputs            */
+/***************************/
+[type=range] {
+	background-color: transparent;
+	border:none;
+	-webkit-appearance: none;
+	padding:0;
+}
+/* todo where(webkit, moz) (forgiving) */
+[type=range]::-webkit-slider-runnable-track {
+	background:#fff;
+	border:1px solid #0008;
+	border-radius: 1em;
+	height:.5em;
+	box-sizing:border-box;
+	cursor:pointer;
+}
+[type=range]::-moz-range-track {
+	background:#fff;
+	border:1px solid #0008;
+	border-radius: 1em;
+	height:.5em;
+	box-sizing:border-box;
+	cursor:pointer;
+}
+[type=range]::-webkit-slider-thumb {
+	width: 1em;
+	height: 1em;
+	box-sizing:border-box;
+	background:var(--color);
+	border-radius: 100%;
+	cursor: pointer;
+
+	margin-top: -.3em;
+	-webkit-appearance: none;
+}
+[type=range]::-moz-range-thumb {
+	width: 1em;
+	height: 1em;
+	box-sizing:border-box;
+	background:var(--color);
+	border-radius: 100%;
+	cursor: pointer;
+}
+
+[type=range]:hover::-webkit-slider-thumb { box-shadow:0 0 0 .5em #0001 }
+[type=range]:hover::-moz-range-thumb     { box-shadow:0 0 0 .5em #0001 }
+
+/**/

@@ -4,18 +4,9 @@ Welcome to level.css a new CSS library.
 
 ## Inspiration
 
-### Style-Systems
-
-https://github.com/alexpate/awesome-design-systems
-
-https://component.gallery/
-
-https://open-ui.org/
-
-https://adele.uxpin.com/
+This library is inspired by this other libraries
 
 ### Normalize
-This library is inspired by this other libraries
 
 https://github.com/csstools/normalize.css
 
@@ -28,3 +19,29 @@ https://github.com/adamgruber/opinionate.css
 https://github.com/sindresorhus/modern-normalize
 
 https://github.com/kripod/css-homogenizer
+
+https://github.com/AustinGil/bedrocss
+
+https://github.com/h5bp/main.css
+
+### Classless
+
+https://github.com/picocss/pico
+
+https://github.com/oxalorg/sakura
+
+https://github.com/ubershmekel/cssbed
+
+https://github.com/kognise/water.css
+
+Collection: https://github.com/dbohdan/classless-css
+
+### Style-Systems
+
+https://github.com/alexpate/awesome-design-systems
+
+https://component.gallery/
+
+https://open-ui.org/
+
+https://adele.uxpin.com/

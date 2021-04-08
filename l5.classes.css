@@ -7,3 +7,35 @@
 @import './classes/table.css';
 @import './classes/badge.css';
 @import './classes/card.css';
+
+
+
+/* namespace-less classes (well known / defacto standards) */
+
+/*
+## naming
+
+.sr-only:
+- tailwind
+- firefox-reader-mode
+
+.visually-hidden:
+- h5bp (main.css)
+- bootstrap
+- drupal
+- firefox-reader-mode
+
+*/
+.visually-hidden {
+    position: absolute !important;
+    padding:0 !important;
+    border:0 !important;
+    clip: rect(0, 0, 0, 0);
+    width: 1px;
+    height: 1px;
+    box-sizing:border-box;
+    overflow: hidden;
+    xcontain:strict; /* performance? */
+    xwhite-space: nowrap; /* why */
+    xmargin-left:-1px; /* can not reproduce  */
+}

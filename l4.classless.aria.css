@@ -1,0 +1,54 @@
+
+/* [aria-label] as tooltip */
+[aria-label]::before {
+  content:attr(aria-label);
+  position:absolute;
+  transform:translate(-1rem, -130%);
+  display:none;
+  border-radius:3px;
+  padding:.2rem .5rem;
+  box-shadow:0 0 .2em #0008;
+  background-color:#000;
+  color:#fff;
+  font-size:.8rem;
+  font-size:.7rem;
+}
+[aria-label]:focus::before {
+  display:block;
+}
+[aria-label]:hover::before {
+  display:block;
+}
+
+
+label[aria-label]:focus-within::before {
+  display:block;
+}
+
+
+
+
+
+[role="tablist"] {
+  display:flex;
+  overflow:auto;
+  xborder-bottom:1px solid;
+  xscrollbar-width:none;
+}
+
+[role="tablist"] > [role="tab"] {
+  background-color:transparent;
+  color:inherit;
+  border-bottom:solid transparent;
+  border-width:0 0 .2rem 0;
+  border-radius:0;
+  white-space:nowrap;
+  outline:none;
+}
+[role="tablist"] > [role="tab"]:focus,
+[role="tablist"] > [aria-selected="true"] {
+  border-bottom-color:var(--color);
+}
+[role="tablist"] > [role="tab"]:hover {
+  background-color:#0001;
+}
