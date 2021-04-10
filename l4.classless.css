@@ -14,7 +14,12 @@ html {
   -webkit-hyphens:auto;
   hyphens:auto;
 
-  overflow-y: scroll; /* consistent y-scrollbar on all pages and on dynamic content */
+  /* consistent y-scrollbar on all pages and on dynamic content
+  when scrollbar-gutter is supported test and use:
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+  */
+  overflow-y: scroll;
 }
 body {
   max-width:var(--width);
@@ -23,9 +28,12 @@ body {
   display: grid; /* center content. Margins will not collapse :/ */
   place-content: center stretch;
 }
+body > * {
+  min-width:0; /* gap makes min-width = content-width, in some cases it will overflow */
+}
 a {
   color:var(--color);
-  transition:color .2s;
+  xtransition:color .2s; /* ff flickers on visited-color-change https://bugzilla.mozilla.org/show_bug.cgi?id=868975 */
 }
 a:visited {
   color:var(--color-text);
@@ -73,7 +81,7 @@ td, th {
 }
 
 :focus-visible {
-  outline: .16em dotted var(--color-text);
+  outline: .16rem dotted var(--color-text);
   outline-offset: .25rem;
 }
 :focus:not(:focus-visible) {

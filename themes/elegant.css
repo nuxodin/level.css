@@ -27,3 +27,23 @@ hr {
 header {
     box-shadow:var(--shadow);
 }
+
+
+
+/* :where(h1, h2, h3) + p:first-letter */
+
+
+h1 + p:first-letter,
+h2 + p:first-letter,
+h3 + p:first-letter {
+    display:block;
+    float:left;
+    margin-right: 0.16em;
+    font-size: calc(1.4em * 2); /* calc(line-height  * 2)  using lh-unit when supported! */
+    margin-top: calc(0.2em); /* calc(line-height - 1)/2 ? */
+
+    /* costumize */
+    font-weight:100;
+    opacity:.4;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}

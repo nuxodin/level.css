@@ -14,7 +14,7 @@ html {
 
 /**
  * Correct the font size and margin on `h1` elements within `section` and
- * `article` contexts in Chrome, Edge, Firefox, and Safari.
+ * `article` contexts in Chrome, Firefox, and Safari.
  */
 
 h1 {
@@ -26,7 +26,7 @@ h1 {
  * ========================================================================== */
 
 /**
- * Remove the margin on nested lists in Chrome, Edge, IE, and Safari.
+ * Remove the margin on nested lists in Chrome and Safari.
  */
 
 dl dl,
@@ -48,21 +48,11 @@ hr {
   height: 0; /* 1 */
 }
 
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
-
-pre {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
-}
-
 /* Text-level semantics
  * ========================================================================== */
 
 /**
- * Add the correct text decoration in Edge 18-, IE, and Safari.
+ * Add the correct text decoration in Safari.
  */
 
 abbr[title] {
@@ -71,7 +61,7 @@ abbr[title] {
 }
 
 /**
- * Add the correct font weight in Chrome, Edge, and Safari.
+ * Add the correct font weight in Chrome and Safari.
  */
 
 b,
@@ -84,10 +74,11 @@ strong {
  * 2. Correct the odd `em` font sizing in all browsers.
  */
 
+pre,
 code,
 kbd,
 samp {
-  font-family: monospace, monospace; /* 1 */
+  font-family: monospace; /* 1 */
   font-size: 1em; /* 2 */
 }
 
@@ -115,8 +106,8 @@ audio:not([controls]) {
  * ========================================================================== */
 
 /**
- * 1. Correct table border color inheritance in all Chrome, Edge, and Safari.
- * 2. Remove text indentation from table contents in Chrome, Edge, and Safari.
+ * 1. Correct table border color inheritance in all Chrome and Safari.
+ * 2. Remove text indentation from table contents in Chrome and Safari. TODO: test in safari (can not reproduce in chrome)
  */
 
 table {
@@ -138,9 +129,10 @@ select {
 }
 
 /**
- * 2. Remove the inheritance of text transform in Edge 18-, Firefox, and IE.
+ * 2. Remove the inheritance of text transform in Firefox. TODO: works now?
  */
 
+select ,
 button {
   text-transform: none; /* 2 */
 }
@@ -157,19 +149,12 @@ button,
 }
 
 /**
- * 2. Add the correct vertical alignment in Chrome, Edge, and Firefox.
- */
-
+ * 2. Add the correct vertical alignment in Chrome and Firefox.
+ TODO: really needed?
+ (firefox and chrome: vertical-align: -0.2em)
+*/
 progress {
   vertical-align: baseline; /* 2 */
-}
-
-/**
- * Remove the inheritance of text transform in Firefox.
- */
-
-select {
-  text-transform: none;
 }
 
 /**
@@ -181,7 +166,7 @@ textarea {
 }
 
 /**
- * 1. Correct the odd appearance in Chrome, Edge, and Safari.
+ * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
 
@@ -200,7 +185,7 @@ textarea {
 }
 
 /**
- * Correct the text style of placeholders in Chrome, Edge, and Safari.
+ * Correct the text style of placeholders in Chrome and Safari.
  */
 
 ::placeholder {
@@ -209,7 +194,7 @@ textarea {
 }
 
 /**
- * Remove the inner padding in Chrome, Edge, and Safari on macOS.
+ * Remove the inner padding in Chrome and Safari on macOS.
  */
 
 ::-webkit-search-decoration {
@@ -252,7 +237,7 @@ textarea {
 }
 
 /*
- * Add the correct styles in Edge 18-, IE, and Safari.
+ * Add the correct styles in Safari.
  */
 
 dialog {
@@ -260,7 +245,6 @@ dialog {
   border: solid;
   color: black;
   display: block;
-  height: -moz-fit-content;
   height: -webkit-fit-content;
   height: fit-content;
   left: 0;
@@ -268,10 +252,8 @@ dialog {
   padding: 1em;
   position: absolute;
   right: 0;
-  width: -moz-fit-content;
   width: -webkit-fit-content;
   width: fit-content;
-  xoverscroll-behavior: contain; /* or "none"? Prevent scroll chaning. -safari. ok? */
 }
 
 dialog:not([open]) {
@@ -279,7 +261,7 @@ dialog:not([open]) {
 }
 
 /*
- * Add the correct display in all browsers.
+ * Add the correct display in all browsers. TODO: firefox, chrome works
  */
 
 summary {

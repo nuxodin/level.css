@@ -19,36 +19,40 @@
 [aria-label]:hover::before {
   display:block;
 }
-
-
 label[aria-label]:focus-within::before {
   display:block;
 }
 
 
-
-
-
-[role="tablist"] {
-  display:flex;
-  overflow:auto;
-  xborder-bottom:1px solid;
-  xscrollbar-width:none;
-}
-
-[role="tablist"] > [role="tab"] {
+/* tabs-controls */
+/*[role="tablist"] {} /* no style, there can be also other contents inside */
+[role="tab"] {
   background-color:transparent;
   color:inherit;
   border-bottom:solid transparent;
   border-width:0 0 .2rem 0;
   border-radius:0;
   white-space:nowrap;
-  outline:none;
+  cursor:pointer;
+  padding:calc(var(--gap) / 4) calc(var(--gap) / 2);
+  margin:0;
 }
-[role="tablist"] > [role="tab"]:focus,
-[role="tablist"] > [aria-selected="true"] {
+[aria-selected="true"] {
   border-bottom-color:var(--color);
 }
-[role="tablist"] > [role="tab"]:hover {
-  background-color:#0001;
+[role="tab"]:hover ,
+[role="tab"]:focus {
+    background-color:#0000000a;
+}
+[role="tabpanel"] {
+  padding: var(--gap, 1rem);
+  xoverflow: auto;
+}
+
+/* more */
+[aria-controls] {
+  cursor: pointer;
+}
+[aria-busy=true] {
+  cursor: progress;
 }

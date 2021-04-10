@@ -66,11 +66,17 @@
     }
     :not(section) > header nav ul ul {
         position:absolute;
-        display:none;
+        xdisplay:none;
+        xtransition-property: opacity, visibility;
+        transition-duration: .4s;
+        visibility:hidden;
+        opacity:0;
     }
     :not(section) > header nav li:focus-within > ul ,
     :not(section) > header nav li:hover > ul {
-        display:block;
+        xdisplay:block;
+        visibility:visible;
+        opacity:1;
     }
     :not(section) > header nav ul {
         padding:0;
