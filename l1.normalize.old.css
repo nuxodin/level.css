@@ -24,7 +24,7 @@ progress {
     vertical-align: baseline; /* needed? (firefox, chrome, safari: vertical-align: -0.2em) */
 }
 
-audio:not([controls]) { /* Add the correct display in iOS 4-7 */
+audio:not([controls]) { /* "Add the correct display in iOS 4-7". do we need it? display is inline but its still hidden!? */
     display: none;
     height: 0;
 }
