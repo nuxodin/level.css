@@ -1,0 +1,30 @@
+hr {
+    box-sizing: content-box; /* Add the correct box sizing in Firefox. (can not reproduce, fixed?) */
+    height: 0; /* Add the correct box sizing in Firefox. (can not reproduce, fixed?) */
+}
+
+pre,
+code,
+kbd,
+samp {
+    font-family: monospace; /* Correct the inheritance and scaling of font size in all browsers. */
+    font-size: 1em; /* Correct the odd `em` font sizing in all browsers. */
+}
+
+table {
+    text-indent: 0; /* Remove text indentation from table contents in Chrome and Safari. */
+}
+
+select ,
+button {
+    text-transform: none; /* Remove the inheritance of text transform in Firefox. */
+}
+
+progress {
+    vertical-align: baseline; /* needed? (firefox, chrome, safari: vertical-align: -0.2em) */
+}
+
+audio:not([controls]) { /* Add the correct display in iOS 4-7 */
+    display: none;
+    height: 0;
+}

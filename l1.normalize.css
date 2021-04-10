@@ -1,246 +1,95 @@
-/* Document https://github.com/csstools/normalize.css/blob/master/normalize.css
- * ========================================================================== */
-
-/**
- * 1. Correct the line height in firefox. Safari chrome have "normal" but it seams to result in "1.15"
- */
-
 html {
-  line-height: 1.15; /* 1 */
+  line-height: 1.15; /* Correct the line height in firefox. Safari chrome have "normal" but it seams to result in "1.15" */
 }
-
-/* Sections
- * ========================================================================== */
-
-/**
- * Correct the font size and margin on `h1` elements within `section` and
- * `article` contexts in Chrome, Firefox, and Safari.
- */
 
 h1 {
-  font-size: 2em;
+  font-size: 2em; /* Correct the font size and margin on `h1` elements within `section` and `article` contexts in Chrome, Firefox, and Safari. */
   margin: 0.67em 0;
 }
-
-/* Grouping content
- * ========================================================================== */
-
-/**
- * Remove the margin on nested lists in Chrome and Safari.
- */
 
 dl dl,
 dl ol,
 dl ul,
 ol dl,
 ul dl {
-  margin: 0;
+  margin: 0; /* Remove the margin on nested lists in Chrome and Safari. */
 }
-
-/**
- * 1. Add the correct box sizing in Firefox.
- * 2. Correct the inheritance of border color in Firefox.
- */
 
 hr {
-  box-sizing: content-box; /* 1 */
-  color: inherit; /* 2 */
-  height: 0; /* 1 */
+  color: inherit; /* Correct the inheritance of border color in Firefox. */
 }
-
-/* Text-level semantics
- * ========================================================================== */
-
-/**
- * Add the correct text decoration in Safari.
- */
 
 abbr[title] {
   text-decoration: underline;
-  text-decoration: underline dotted;
+  text-decoration: underline dotted; /* Add the correct text decoration in Safari. */
 }
-
-/**
- * Add the correct font weight in Chrome and Safari.
- */
 
 b,
 strong {
-  font-weight: bolder;
+  font-weight: bolder; /* Add the correct font weight in Chrome and Safari. */
 }
-
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
-
-pre,
-code,
-kbd,
-samp {
-  font-family: monospace; /* 1 */
-  font-size: 1em; /* 2 */
-}
-
-/**
- * Add the correct font size in all browsers.
- */
 
 small {
-  font-size: 80%;
+  font-size: 80%; /* Add the correct font size in all browsers. */
 }
-
-/* Embedded content
- * ========================================================================== */
-
-/**
- * Add the correct display in iOS 4-7.
- */
-
-audio:not([controls]) {
-  display: none;
-  height: 0;
-}
-
-/* Tabular data
- * ========================================================================== */
-
-/**
- * 1. Correct table border color inheritance in all Chrome and Safari.
- * 2. Remove text indentation from table contents in Chrome and Safari. (can not reproduce in chrome, safari)
- */
 
 table {
-  border-color: inherit; /* 1 */
-  text-indent: 0; /* 2 */
+  border-color: inherit; /* Correct table border color inheritance in all Chrome and Safari. */
 }
 
-/* Forms
- * ========================================================================== */
-
-/**
- * Remove the margin on controls in Safari.
- */
-
-button,
+textarea, /* textarea: Firefox and Safari. */
+button, /* others: Safari. */
 input,
 select {
-  margin: 0;
+  margin: 0; /* Remove the margin on controls in Safari. */
 }
-
-/**
- * 2. Remove the inheritance of text transform in Firefox. TODO: works now
- */
-
-select ,
-button {
-  text-transform: none; /* 2 */
-}
-
-/**
- * Correct the inability to style buttons in iOS and Safari.
- */
 
 button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
-  -webkit-appearance: button;
+  -webkit-appearance: button; /* Correct the inability to style buttons in iOS and Safari. */
 }
 
-/**
- * 2. Add the correct vertical alignment in Chrome and Firefox.
- TODO: really needed?
- (firefox and chrome: vertical-align: -0.2em)
-*/
-progress {
-  vertical-align: baseline; /* 2 */
-}
-
-/**
- * 1. Remove the margin in Firefox and Safari.
- */
-
-textarea {
-  margin: 0; /* 1 */
-}
-
-/**
- * 1. Correct the odd appearance in Chrome and Safari.
- * 2. Correct the outline style in Safari.
- */
 
 [type="search"] {
-  -webkit-appearance: textfield; /* 1 */
-  outline-offset: -2px; /* 2 */
+  -webkit-appearance: textfield; /* Correct the odd appearance in Chrome and Safari. */
+  outline-offset: -2px; /* Correct the outline style in Safari. */
 }
 
-/**
- * Correct the cursor style of increment and decrement buttons in Safari.
- */
-
 ::-webkit-inner-spin-button,
-::-webkit-outer-spin-button {
+::-webkit-outer-spin-button { /* Correct the cursor style of increment and decrement buttons in Safari. */
   height: auto;
 }
 
-/**
- * Correct the text style of placeholders in Chrome and Safari. works now
- */
-
-::placeholder {
+::placeholder { /* Correct the text style of placeholders in Chrome and Safari. */
   color: inherit;
   opacity: 0.54;
 }
 
-/**
- * Remove the inner padding in Chrome and Safari on macOS.
- */
-
 ::-webkit-search-decoration {
-  -webkit-appearance: none;
+  -webkit-appearance: none; /* Remove the inner padding in Chrome and Safari on macOS. */
 }
-
-/**
- * 1. Correct the inability to style upload buttons in iOS and Safari.
- * 2. Change font properties to `inherit` in Safari.
- */
 
 ::-webkit-file-upload-button {
-  -webkit-appearance: button; /* 1 */
-  font: inherit; /* 2 */
+  -webkit-appearance: button; /* Correct the inability to style upload buttons in iOS and Safari. */
+  font: inherit; /* Change font properties to `inherit` in Safari. */
 }
 
-/**
- * Remove the inner border and padding of focus outlines in Firefox.
- */
-
-::-moz-focus-inner {
+::-moz-focus-inner { /* Remove the inner border and padding of focus outlines in Firefox. */
   border-style: none;
   padding: 0;
 }
 
-/**
- * Restore the focus outline styles unset by the previous rule in Firefox.
- */
-
-:-moz-focusring {
+:-moz-focusring { /* Restore the focus outline styles unset by the previous rule in Firefox. */
   outline: 1px dotted ButtonText;
 }
 
-/**
- * Remove the additional :invalid styles in Firefox.
- */
-
-:-moz-ui-invalid {
+:-moz-ui-invalid { /* Remove the additional :invalid styles in Firefox. */
   box-shadow: none;
 }
 
-/*
- * Add the correct styles in Safari 13.1
- */
-
-dialog {
+dialog { /* Add the correct styles in Safari 14 */
   background-color: white;
   border: solid;
   color: black;
@@ -255,15 +104,10 @@ dialog {
   width: -webkit-fit-content;
   width: fit-content;
 }
-
 dialog:not([open]) {
   display: none;
 }
 
-/*
- * Add the correct display in safari 13.1
- */
-
-summary {
+summary { /* Add the correct display in safari 14 */
   display: list-item;
 }
