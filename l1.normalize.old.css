@@ -1,6 +1,6 @@
 hr {
-    box-sizing: content-box; /* Add the correct box sizing in Firefox. (can not reproduce, fixed?) */
-    height: 0; /* Add the correct box sizing in Firefox. (can not reproduce, fixed?) */
+    box-sizing: content-box; /* Add the correct box sizing in Firefox. (fixed) */
+    height: 0; /* Add the correct box sizing in Firefox. (fixed) */
 }
 
 pre,
