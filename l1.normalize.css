@@ -2,7 +2,7 @@
  * ========================================================================== */
 
 /**
- * 1. Correct the line height in all browsers.
+ * 1. Correct the line height in firefox. Safari chrome have "normal" but it seams to result in "1.15"
  */
 
 html {
@@ -107,7 +107,7 @@ audio:not([controls]) {
 
 /**
  * 1. Correct table border color inheritance in all Chrome and Safari.
- * 2. Remove text indentation from table contents in Chrome and Safari. TODO: test in safari (can not reproduce in chrome)
+ * 2. Remove text indentation from table contents in Chrome and Safari. (can not reproduce in chrome, safari)
  */
 
 table {
@@ -129,7 +129,7 @@ select {
 }
 
 /**
- * 2. Remove the inheritance of text transform in Firefox. TODO: works now?
+ * 2. Remove the inheritance of text transform in Firefox. TODO: works now
  */
 
 select ,
@@ -185,7 +185,7 @@ textarea {
 }
 
 /**
- * Correct the text style of placeholders in Chrome and Safari.
+ * Correct the text style of placeholders in Chrome and Safari. works now
  */
 
 ::placeholder {
@@ -237,7 +237,7 @@ textarea {
 }
 
 /*
- * Add the correct styles in Safari.
+ * Add the correct styles in Safari 13.1
  */
 
 dialog {
@@ -261,7 +261,7 @@ dialog:not([open]) {
 }
 
 /*
- * Add the correct display in all browsers. TODO: firefox, chrome works
+ * Add the correct display in safari 13.1
  */
 
 summary {
