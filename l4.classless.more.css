@@ -1,3 +1,11 @@
+/*
+Resources:
+https://getbootstrap.com/docs/5.0/forms/overview/
+https://www.tjvantoll.com/2013/04/15/list-of-pseudo-elements-to-style-form-controls/
+
+
+*/
+
 /****************/
 /* custom list  */
 /****************/
@@ -67,7 +75,6 @@ select:not([size],[multiple]) {
 	border: solid 1px;
 	position: relative;
 	border-radius:.15em;
-	box-sizing: border-box;
 	padding:0;
 }
 [type=radio]:checked,
@@ -90,7 +97,7 @@ select:not([size],[multiple]) {
 	font-family:Arial, Helvetica, sans-serif;
 	font-weight:normal;
 	xoverflow:hidden;
-	font-size:.9em;
+	font-size:.8em;
 }
 [type=radio]:checked::before ,
 [type=checkbox]:checked::before {
@@ -176,14 +183,14 @@ select:not([size],[multiple]) {
 	scrollbar-width: var(--scrollbar-width);
 	scrollbar-color: var(--scrollbar-color-thumb) var(--scrollbar-color-track);
 }
-*::-webkit-scrollbar {
+::-webkit-scrollbar {
 	width: var(--scrollbar-width-unit);
 	height: var(--scrollbar-width-unit);
 }
-*::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
 	background: var(--scrollbar-color-track);
 }
-*::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
 	background-color: var(--scrollbar-color-thumb);
 }
 /* select */
@@ -205,25 +212,25 @@ select, textarea {
 }
 /* todo where(webkit, moz) (forgiving) */
 [type=range]::-webkit-slider-runnable-track {
+	box-sizing:border-box;
+	height:.5em;
 	background:#fff;
 	border:1px solid #0008;
 	border-radius: 1em;
-	height:.5em;
-	box-sizing:border-box;
 	cursor:pointer;
 }
 [type=range]::-moz-range-track {
+	box-sizing:border-box;
+	height:.5em;
 	background:#fff;
 	border:1px solid #0008;
 	border-radius: 1em;
-	height:.5em;
-	box-sizing:border-box;
 	cursor:pointer;
 }
 [type=range]::-webkit-slider-thumb {
+	box-sizing:border-box;
 	width: 1em;
 	height: 1em;
-	box-sizing:border-box;
 	background:var(--color);
 	border-radius: 100%;
 	cursor: pointer;
@@ -232,9 +239,9 @@ select, textarea {
 	-webkit-appearance: none;
 }
 [type=range]::-moz-range-thumb {
+	box-sizing:border-box;
 	width: 1em;
 	height: 1em;
-	box-sizing:border-box;
 	background:var(--color);
 	border-radius: 100%;
 	cursor: pointer;
@@ -243,4 +250,14 @@ select, textarea {
 [type=range]:hover::-webkit-slider-thumb { box-shadow:0 0 0 .5em #0001 }
 [type=range]:hover::-moz-range-thumb     { box-shadow:0 0 0 .5em #0001 }
 
-/**/
+/* autofill */
+:-webkit-autofill { /* also works for firefox! */
+	filter:none;
+    box-shadow: 0 0 0 100px var(--color-light) inset;
+}
+
+/* autofill chrome */
+::selection {
+	background:var(--color);
+	color:#fff;
+}

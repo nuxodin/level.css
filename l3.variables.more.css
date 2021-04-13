@@ -10,7 +10,7 @@
 
     --color-area: var(--color-light);
 
-    /* named *
+    /* named */
     --color-red :     hsl(0deg,   var(--hsl-s), var(--hsl-l));
     --color-orange :  hsl(30deg,  var(--hsl-s), var(--hsl-l));
     --color-yellow :  hsl(60deg,  var(--hsl-s), var(--hsl-l));
@@ -33,5 +33,10 @@
 
     /* other */
     --radius: .3rem;
-    --shadow: 0px .25rem .8rem -.25rem rgba(23, 23, 23, 0.35), 0px .25rem .5rem -.35rem rgba(23, 23, 23, 0.2);
+
+    --shadow-x:0;
+    --shadow-y:.25rem;
+    --shadow:
+        var(--shadow-x) var(--shadow-y) .8rem -.25rem rgba(23, 23, 23, 0.35),
+        var(--shadow-x) var(--shadow-y) .5rem -.35rem rgba(23, 23, 23, 0.2);
 }

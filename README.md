@@ -47,3 +47,13 @@ https://component.gallery/
 https://open-ui.org/
 
 https://adele.uxpin.com/
+
+
+### components
+
+pure css lightbox:   
+https://madmurphy.github.io/takefive.css/
+
+### Statistics
+
+https://almanac.httparchive.org

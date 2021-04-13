@@ -1,3 +1,9 @@
+/*
+use aria?
+No, css is representation
+https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_Role
+*/
+
 .lx-table {
     display:table;
 }
@@ -11,7 +17,6 @@
     display:table-cell;
     padding:calc(var(--gap) / 2); /* gap by default ?*/
 }
-
 
 
 

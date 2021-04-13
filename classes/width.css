@@ -1,3 +1,4 @@
+
 .lx-width {
     max-width:var(--width);
     margin:auto;
@@ -5,15 +6,18 @@
     padding-right:var(--gap);
     box-sizing:content-box;
 }
-
-/* remove gap on nested width-containers */
+/* remove padding on nested width-containers */
 .lx-width .lx-width {
     padding-left:0;
     padding-right:0;
 }
 
+
 /*
 tailwind: .w-full
+bootstrap: .w-100
+codyhouse: .width-100%
+bulma: .is-fullwidth
 */
 .lx-width-full {
     width:100%;

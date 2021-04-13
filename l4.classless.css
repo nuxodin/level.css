@@ -164,7 +164,7 @@ textarea {
 /* buttons */
 button,
 ::file-selector-button,
-::-webkit-file-upload-button {
+::-webkit-file-upload-button { /* The selector is not invalidated although ::-webkit-file-upload-button in ff is not working. */
   transition:color .2s;
   background-color:var(--color);
   color:var(--color-bg);

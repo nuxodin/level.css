@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+
+  <title>Level.css TEST</title>
+
+  <script src="./test.js" type=module></script>
+
+  <link rel="stylesheet" href="../l1.normalize.old.css">
+  <link rel="stylesheet" href="../l1.normalize.css">
+  <link rel="stylesheet" href="../l2.recommend.css">
+  <link rel="stylesheet" href="../l3.variables.css">
+  <link rel="stylesheet" href="../l3.variables.more.css">
+
+
+  <style>
+    body {
+      padding:calc(var(--gap) * 2);
+      xdisplay: grid;
+      xgap:1rem;
+      xgrid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    }
+    body > * {
+        padding:var(--gap);
+        xbackground:#eee;
+        xmin-height:300px;
+    }
+    .colors {
+        display:grid;
+        grid-template-columns:repeat(auto-fill, minmax(160px,1fr));
+        gap:var(--gap);
+    }
+    .colors > * {
+        height:120px;
+        display:flex;
+        align-items:center;
+        justify-content: center;
+        border-radius:var(--radius);
+    }
+  </style>
+
+</head>
+
+<body>
+
+
+<section>
+    <h2>Semantic-Colors</h2>
+    <div class=colors>
+        <div style="background:var(--color)">--color</div>
+        <div style="background:var(--color-dark); color:var(--color-bg)">--color-dark</div>
+        <div style="background:var(--color-light)">--color-light</div>
+        <div style="background:var(--color-2)">--color-2</div>
+        <div style="background:var(--color-2-dark); color:var(--color-bg)">--color-2-dark</div>
+        <div style="background:var(--color-2-light)">--color-2-light</div>
+
+        <div style="background:var(--color-text); color:var(--color-bg)">--color-text</div>
+        <div style="background:var(--color-bg);">--color-bg</div>
+        <div style="background:var(--color-gray)">--color-grey</div>
+        <div style="background:var(--color-gray-light)">--color-grey-light</div>
+        <div style="background:var(--color-gray-dark);  color:var(--color-bg)">--color-grey-dark</div>
+    </div>
+</section>
+
+<section>
+    <h2>Named-Colors</h2>
+    <div class=colors>
+        <div style="background:var(--color-red);">--color-red</div>
+        <div style="background:var(--color-orange)">--color-orange</div>
+        <div style="background:var(--color-yellow)">--color-yellow</div>
+        <div style="background:var(--color-green)">--color-green</div>
+        <div style="background:var(--color-cyan)">--color-cyan</div>
+        <div style="background:var(--color-blue)">--color-blue</div>
+        <div style="background:var(--color-violet)">--color-violet</div>
+        <div style="background:var(--color-purple)">--color-purple</div>
+        <div style="background:var(--color-magenta)">--color-magenta</div>
+    </div>
+</section>
+
+
+<section style="max-width:var(--width); font-family:var(--font); margin:auto; border:1px solid; box-shadow:var(--shadow); --shadow-size:2rem; border-radius:var(--radius); color:var(--color-text); background-color:var(--color-bg)">
+
+    <h1>Demo</h1>
+
+    <style style="display:block; white-space: pre;" contenteditable>
+    :root {
+        --shadow-x:.1rem;
+        --shadow-y:.8rem;
+    }
+    </style>
+    <ul>
+        <li>background-color:var(--color-bg)
+        <li>color:var(--color-text)
+        <li>max-width:var(--width)
+        <li>font-family:--font
+        <li>box-shadow:var(--shadow)
+        <li>border-radius:var(--radius)
+    </ul>
+
+    <p>Seamlessly underwhelm dynamic e-business without best-of-breed web-readiness. Synergistically iterate global technologies after client-based total linkage. Continually underwhelm resource sucking e-tailers for sticky web-readiness. Appropriately cultivate orthogonal niche markets with wireless process improvements. Intrinsicly transition multimedia based users vis-a-vis high-quality networks. Distinctively predominate interactive potentialities whereas leveraged interfaces. Enthusiastically.</p>
+    <div style="background-color:var(--color-area); height:200px; display:flex; place-items:center; justify-content: center;">
+        background-color:var(--color-area);
+    </div>
+</section>

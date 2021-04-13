@@ -9,11 +9,11 @@ html {
     word-break:break-word;
     overflow-wrap:break-word;
     font-family:Arial, Helvetica, sans-serif;
+    line-height:1.3;
 }
 body {
     margin:auto;
     min-block-size:100vh;
-    box-sizing:border-box;
 }
 h1, h2, h3, h4, h5, h6 {
     margin-top:1em;
@@ -29,6 +29,33 @@ hr {
     border-style:solid;
     border-width:0 0 1px 0;
 }
+img,
+svg,
+video,
+canvas {
+    max-width:100%;
+    object-fit:cover;
+    height: auto;
+}
+
+table {
+    border-collapse: collapse;
+	font-variant-numeric: tabular-nums;
+}
+th {
+    text-align:inherit;
+}
+
+audio, video {
+	width: 100%;
+}
+video {
+    background-color:#aaa;
+}
+iframe {
+    width:100%;
+}
+
 nav a {
     text-decoration:none;
 }
@@ -41,33 +68,14 @@ nav ul {
 nav > ul {
     padding-left:0;
 }
-img,
-svg,
-video,
-canvas {
-    max-width:100%;
-    object-fit:cover;
-    height: auto;
-}
-audio, video {
-	width: 100%;
-}
-video {
-    background-color:#aaa;
-}
-iframe {
-    box-sizing:border-box;
-    width:100%;
-}
-table {
-    border-collapse: collapse;
-	font-variant-numeric: tabular-nums;
-}
 
 dialog {
     xoverscroll-behavior: contain; /* or "none"? Prevent scroll chaning. -safari. ok? */
 }
 
+summary {
+    cursor:pointer;
+}
 
 /* form */
 label,
@@ -84,7 +92,6 @@ input, textarea, select, button {
     font-family: inherit;
     font-size: inherit;
     line-height:1.3;
-    box-sizing:border-box;
 }
 input, textarea, select {
     border-radius:0;
@@ -94,6 +101,9 @@ input, textarea, select {
 button {
     padding-left:.5em;
     padding-right:.5em;
+}
+select {
+    cursor:pointer;
 }
 input, textarea {
     width:11rem;

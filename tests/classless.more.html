@@ -142,3 +142,28 @@
         </select>
     </div>
 </section>
+
+
+<section>
+    <h1>:autofill</h1>
+    <form>
+        <label>Text Input <input id=x type=text> </label><br>
+        <label>Password <input id=y type=password></label><br>
+    </form>
+    <form>
+        <label> Name: <input name=name> </label><br>
+        <label> Firstname: <input name=firstname> </label><br>
+        <label> Company: <input name=company> </label><br>
+        <label> E-Mail: <input type=email name=email> </label><br>
+    </form>
+</section>
+
+<section>
+    <h1>::selection</h1>
+    <h1 id=selectionTest>Some text</h1>
+    <script>
+        var r = new Range()
+        r.selectNodeContents(selectionTest);
+        getSelection().addRange(r);
+    </script>
+</section>

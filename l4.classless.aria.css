@@ -56,3 +56,80 @@ label[aria-label]:focus-within::before {
 [aria-busy=true] {
   cursor: progress;
 }
+
+
+/* banner navigation */
+[role=banner] nav li {
+  position:relative;
+  white-space:nowrap;
+  background:var(--color);
+  color:var(--color-light);
+}
+[role=banner] nav > ul {
+  display:flex;
+  flex-wrap:wrap;
+  gap:1rem;
+  margin:0;
+}
+[role=banner] nav ul ul {
+  position:absolute;
+  xdisplay:none;
+  transition-duration: .4s;
+  visibility:hidden;
+  opacity:0;
+}
+[role=banner] nav li:focus-within > ul ,
+[role=banner] nav li:hover > ul {
+  xdisplay:block;
+  visibility:visible;
+  opacity:1;
+}
+[role=banner] nav ul {
+  padding:0;
+}
+[role=banner] nav a {
+  color:inherit;
+  padding:.2rem .5rem;
+  display:inline-block;
+}
+
+/* role=banner *
+[role=banner] {
+  position:sticky;
+  top:0;
+  left:0;
+  right:0;
+  background-color:#fffb;
+}
+[role=banner] .lx-width {
+  display:flex;
+  gap:1rem;
+  flex-wrap:wrap;
+  justify-content: space-between;
+  align-items:baseline;
+  margin-top:1rem;
+  margin-bottom:1rem;
+}
+[role=banner] .lx-width > * {
+  margin:0;
+}
+[role=banner] .lx-width > h1 {
+  margin:auto;
+}
+/**/
+
+
+
+/*
+sticky footer plugin
+main {
+  background-color:var(--color-bg);
+}
+[role=contentinfo] {
+  position:sticky;
+  z-index:-1;
+  bottom:0;
+  left:0;
+  right:0;
+}
+*/
