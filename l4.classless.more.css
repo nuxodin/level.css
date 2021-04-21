@@ -261,3 +261,28 @@ select, textarea {
 	background:var(--color);
 	color:#fff;
 }
+
+
+
+
+/* Spin Buttons
+- bigger chromes spinners
+- hide firefox spnners
+*
+input[type=number] {
+    appearance:textfield;
+}
+@supports selector(::-webkit-inner-spin-button) {
+	input[type="number"] {
+		padding-right:1.2em;
+	}
+	::-webkit-inner-spin-button {
+		position: absolute;
+		right: 0;
+		top: -1px;
+		bottom: -1px;
+		padding-left:.2em;
+		padding-right:.2em;
+	}
+}
+/**/

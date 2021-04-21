@@ -7,11 +7,26 @@
   display:none;
   border-radius:3px;
   padding:.2rem .5rem;
-  box-shadow:0 0 .2em #0008;
+  filter: drop-shadow(0 0 .2em #0008);
   background-color:#000;
   color:#fff;
-  font-size:.8rem;
   font-size:.7rem;
+  pointer-events:none;
+
+  /* add arrow */
+  border-width:0 0 .7rem 0;
+  border-color:transparent;
+  border-style:solid;
+  background-color: transparent;
+  background-image:
+    linear-gradient(#000,#000),
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><path d="M12 21L0 3h24z"/></svg>');
+  background-repeat: no-repeat, no-repeat;
+  background-origin: padding-box, border-box;
+  background-size: 100%, auto 1rem;
+  background-position: 0 0, bottom 0 left .8rem;
+  transform:translate(-1rem, -100%);
+  /**/
 }
 [aria-label]:focus::before {
   display:block;
