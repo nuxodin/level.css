@@ -77,16 +77,20 @@ summary {
     cursor:pointer;
 }
 
-/* form */
+/* form
+.button: milligram
+.btn: bootstrap, mincss, basscss
+*/
 label,
 button:not([disabled]),
+.button,
 [type=checkbox],
 [type=radio],
 [type=file] {
     cursor:pointer;
 }
 
-input, textarea, select, button {
+input, textarea, select, button, .button {
     padding:.2em;
     border:1px solid rgba(0,0,0,.5);
     font-family: inherit;
@@ -98,7 +102,7 @@ input, textarea, select {
     line-height:1.3;
     font-family:inherit;
 }
-button {
+button, .button {
     padding-left:.5em;
     padding-right:.5em;
 }
@@ -120,7 +124,6 @@ todo[type=time]
 {
     width:auto;
 }
-
 
 
 /* beta */

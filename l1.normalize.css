@@ -1,5 +1,10 @@
 html {
-  line-height: 1.15; /* Correct the line height in firefox. Safari chrome have "normal" but it seams to result in "1.15" */
+  /* Correct the line height in firefox.
+  Chrome seams to round computed line-height:
+  16px (font-size) * 1.15 (line-height) = 18.4px (line-height);
+  But chrome uses 18px
+  */
+  line-height: 1.15;
 }
 
 h1 {
@@ -7,41 +12,31 @@ h1 {
   margin: 0.67em 0;
 }
 
-dl dl,
-dl ol,
-dl ul,
-ol dl,
-ul dl {
+:where(dl :is(dl, ol, ul), :is(ol, ul) dl) {
   margin: 0; /* Remove the margin on nested lists in Chrome and Safari. */
 }
-
-hr {
+:where(hr) {
   color: inherit; /* Correct the inheritance of border color in Firefox. */
 }
-
-abbr[title] {
+:where(abbr[title]) {
   text-decoration: underline;
   text-decoration: underline dotted; /* Add the correct text decoration in Safari. */
 }
-
-b,
-strong {
+:where(b, strong) {
   font-weight: bolder; /* Add the correct font weight in Chrome and Safari. */
 }
-
-small {
+:where(small) {
   font-size: 80%; /* Add the correct font size in all browsers. */
 }
-
-table {
-  border-color: inherit; /* Correct table border color inheritance in all Chrome and Safari. */
+:where(table) {
+  border-color: currentColor; /* Correct table border color in Chrome and Safari. */
 }
 
 textarea, /* textarea: Firefox and Safari. */
 button, /* others: Safari. */
 input,
 select {
-  margin: 0; /* Remove the margin on controls in Safari. */
+  margin: 0;
 }
 
 button,
@@ -81,11 +76,10 @@ button,
   padding: 0;
 }
 
-:-moz-focusring { /* Restore the focus outline styles unset by the previous rule in Firefox. */
+:where(:-moz-focusring) { /* Restore the focus outline styles unset by the previous rule in Firefox. */
   outline: 1px dotted ButtonText;
 }
-
-:-moz-ui-invalid { /* Remove the additional :invalid styles in Firefox. */
+:where(:-moz-ui-invalid) { /* Remove the additional :invalid styles in Firefox. */
   box-shadow: none;
 }
 

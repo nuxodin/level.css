@@ -10,6 +10,7 @@
 
   <link rel="stylesheet" href="../l1.normalize.old.css">
   <link rel="stylesheet" href="../l1.normalize.css">
+  <link rel="stylesheet" href="../l1.normalize.experiments.css">
 
 
   <style>
@@ -187,26 +188,22 @@
   <div id=b-wrapper>
     <div style="font-weight:100">
       <span>span</span> <br>
-      <b>this is a b</b> <br>
-      <strong>strong</strong> <br>
+      <b>this is a b</b>, <strong>strong</strong>
     </div>
     font-weight:400:
     <div style="font-weight:400">
       <span>span</span> <br>
-      <b>this is a b</b> <br>
-      <strong>strong</strong> <br>
+      <b>this is a b</b>, <strong>strong</strong>
     </div>
     font-weight:500:
     <div style="font-weight:500">
       <span>span</span> <br>
-      <b>this is a b</b> <br>
-      <strong>strong</strong> <br>
+      <b>this is a b</b>, <strong>strong</strong>
     </div>
     font-weight:600:
     <div style="font-weight:600">
       <span>span</span> <br>
-      <b>this is a b</b> <br>
-      <strong>strong</strong> <br>
+      <b>this is a b</b>, <strong>strong</strong>
     </div>
   </div>
   <style>
@@ -248,8 +245,7 @@
 <section>
   <b>table</b>
   <br>
-  border-color should inherit? (green)
-  I think it should be currentColor (todo)
+  border-color should be currentColor not grey.
   <div id=table-wrapper>
     <table id=table>
       <tr>
@@ -264,7 +260,6 @@
     #table {
       border-width:10px;
       border-style:solid;
-      xtext-indent: 30px;
     }
   </style>
 </section>
@@ -274,16 +269,35 @@
   <br>
   <button>Button</button><input><select><option></select><br>
   <button>Button</button><input><select><option></select><br>
-</section>
-
-<section>
+  <hr>
   <b>button, select text-transform not inherited</b>
   <br>
   <div style=text-transform:uppercase>
     UpperCase<br>
     <button>Button</button><input value=input><select><option>select</select>
   </div>
+
+  <hr>
+  <b>input size-attr</b>
+  <br>
+  <table>
+    <tr>
+      <td>size=1
+      <td><input size="1">
+    <tr>
+      <td>size=4
+      <td><input size="4">
+    <tr>
+      <td>size=20
+      <td><input size="20">
+    <tr>
+      <td>no size
+      <td><input>
+
+  </table>
+
 </section>
+
 
 <section>
   TODO:
@@ -444,16 +458,12 @@
   </details>
 
   <details id=summaryTest>
-    <summary style="list-style-type:circle">
-      list-style-type:circle
-    </summary>
+    <summary style="list-style-type:circle">list-style-type:circle</summary>
     <p>More info about the details.</p>
   </details>
 
   <details id=summaryTest>
-    <summary style="list-style-type:armenian">
-      list-style-type:armenian
-    </summary>
+    <summary style="list-style-type:armenian">list-style-type:armenian</summary>
     <p>More info about the details.</p>
   </details>
 
