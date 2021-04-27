@@ -1,15 +1,14 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  scroll-behavior: smooth;
+*, ::before, ::after {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    line-height:var(--line-height);
 }
-
 html {
     word-break:break-word;
     overflow-wrap:break-word;
     font-family:Arial, Helvetica, sans-serif;
     line-height:1.3;
+    --line-height: calc(.7em + .8rem);
 }
 body {
     margin:auto;
@@ -18,12 +17,6 @@ body {
 h1, h2, h3, h4, h5, h6 {
     margin-top:1em;
     margin-bottom:1em;
-}
-h1 {
-    line-height:.9;
-}
-h2 {
-    line-height:1;
 }
 hr {
     border-style:solid;
@@ -37,7 +30,6 @@ canvas {
     object-fit:cover;
     height: auto;
 }
-
 table {
     border-collapse: collapse;
 	font-variant-numeric: tabular-nums;
@@ -45,7 +37,6 @@ table {
 th {
     text-align:inherit;
 }
-
 audio, video {
 	width: 100%;
 }
@@ -55,7 +46,6 @@ video {
 iframe {
     width:100%;
 }
-
 nav a {
     text-decoration:none;
 }
@@ -68,29 +58,20 @@ nav ul {
 nav > ul {
     padding-left:0;
 }
-
-dialog {
-    xoverscroll-behavior: contain; /* or "none"? Prevent scroll chaning. -safari. ok? */
-}
-
 summary {
     cursor:pointer;
 }
 
-/* form
+/* form */
+
+/*
 .button: milligram
 .btn: bootstrap, mincss, basscss
 */
-label,
-button:not([disabled]),
-.button,
-[type=checkbox],
-[type=radio],
-[type=file] {
+label, button:not([disabled]), [type=checkbox], [type=radio], [type=file], .btn {
     cursor:pointer;
 }
-
-input, textarea, select, button, .button {
+input, textarea, select, button, .btn {
     padding:.2em;
     border:1px solid rgba(0,0,0,.5);
     font-family: inherit;
@@ -102,7 +83,7 @@ input, textarea, select {
     line-height:1.3;
     font-family:inherit;
 }
-button, .button {
+button, .btn {
     padding-left:.5em;
     padding-right:.5em;
 }
@@ -115,13 +96,7 @@ input, textarea {
 textarea {
     resize: vertical;
 }
-[type=radio],
-[type=checkbox],
-[type=file],
-todo[type=datetime-local],
-todo[type=date],
-todo[type=time]
-{
+[type=radio], [type=checkbox], [type=file], todo[type=datetime-local], todo[type=date], todo[type=time] {
     width:auto;
 }
 
@@ -133,3 +108,8 @@ textarea {
     xdisplay: inline-table; /* chrome makes align with the first line, but unresizable */
 }
 /**/
+/*
+dialog {
+    overscroll-behavior: contain; /* or "none"? Prevent scroll chaning. -safari. ok? * /
+}
+*/

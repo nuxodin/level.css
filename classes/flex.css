@@ -13,7 +13,20 @@
     flex-grow:1;
 }
 
+/*
+
 .lx-flex-col {
     display:flex;
     flex-direction:column;
 }
+
+
+
+https://meowni.ca/posts/monica-dot-css/
+
+.horizontal {display: flex; flex-direction: row; justify-content: space-between}
+.vertical {display: flex; flex-direction: column}
+.center {justify-content: center; align-items: center}
+.flex {flex: 1}
+
+*/

@@ -21,5 +21,4 @@ bulma: .is-fullwidth
 */
 .lx-width-full {
     width:100%;
-    box-sizing: border-box;
 }

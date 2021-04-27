@@ -26,8 +26,16 @@ let html = `
 
 <style>
 #testTools {
-    position:fixed; bottom:10px; right:10px; background:#fff; box-shadow:0 0 10px; font-size:15px; line-height:1.2; font-family:arial;
+    position:fixed;
+    bottom:10px;
+    right:10px;
+    background:#fff;
+    box-shadow:0 0 10px;
+    font-size:15px;
+    line-height:1.2;
+    font-family:arial;
     color:#000;
+    --line-height:1.2;
 }
 #testTools.-Mini {
     height:40px;

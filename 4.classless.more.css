@@ -58,7 +58,6 @@ select:not([size],[multiple]) {
     xtext-overflow: ellipsis;
 }
 
-
 /***************************/
 /* custom check-/radiobox  */
 /***************************/
@@ -145,7 +144,6 @@ select:not([size],[multiple]) {
 	background-color:#0001;
 }
 
-
 /***************************/
 /* color input             */
 /***************************/
@@ -169,11 +167,10 @@ select:not([size],[multiple]) {
 	padding:0;
 }
 
-
 /***************************/
 /* scrollbars              */
 /***************************/
-:root {
+html {
 	--scrollbar-width-unit: .7rem;
 	--scrollbar-width: normal;
 	--scrollbar-color-track: var(--color-light);
@@ -198,8 +195,6 @@ select, textarea {
 	--scrollbar-width-unit: .4rem;
 	--scrollbar-width: thin;
 }
-
-
 
 /***************************/
 /* range inputs            */
@@ -261,8 +256,6 @@ select, textarea {
 	background:var(--color);
 	color:#fff;
 }
-
-
 
 
 /* Spin Buttons

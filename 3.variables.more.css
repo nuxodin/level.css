@@ -1,4 +1,4 @@
-:root {
+html {
     /* function */
     --hsl-h-2:calc(var(--hsl-h) - 120);
     --hsl-s-2:var(--hsl-s);

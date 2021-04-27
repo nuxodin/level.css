@@ -9,7 +9,6 @@ html {
 
   font-family:var(--font);
   font-size:calc(13px + .7vmin);
-  line-height:1.4;
 
   -webkit-hyphens:auto;
   hyphens:auto;
@@ -69,25 +68,22 @@ hr {
 }
 */
 
-
 table {
   width: 100%;
 }
-
 td, th {
   padding: 0.5em;
   padding: calc(var(--gap) / 2);
   border-bottom: 1px solid var(--color-light);
 }
-
 :focus-visible {
   outline: .16rem dotted var(--color-text);
   outline-offset: .25rem;
+  xtransition: outline-offset .1s ease;
 }
 :focus:not(:focus-visible) {
   outline-width: 0;
 }
-
 blockquote {
   margin:0;
   padding: calc(var(--gap) / 2);
@@ -96,14 +92,12 @@ blockquote {
   background-color: var(--color-light);
   border-radius:var(--radius);
 }
-
 pre {
   background-color: var(--color-light);
   padding: var(--gap);
   overflow-x: auto;
   border-radius:var(--radius);
 }
-
 code {
   font-size: 0.9em;
   padding: 0 0.5em;
@@ -112,26 +106,20 @@ code {
   box-decoration-break: clone;
   line-height:1;
 }
-
 mark {
   background-color: hsl(var(--hsl-h), calc(var(--hsl-s) * 4), 70%, 0.5);
   background-color: hsl(var(--hsl-h), 100%, 70%, 0.5);
   padding:0 0.15em;
 }
 table {
-  font-size:.8rem;
+  xfont-size:.8rem;
 }
 
 
 /* FORM */
 
 /* all inputs, buttons */
-input,
-textarea,
-select,
-button,
-::file-selector-button,
-::-webkit-file-upload-button {
+input, textarea, select, button, ::file-selector-button, ::-webkit-file-upload-button, .btn {
 	box-sizing:border-box;
 	padding: .2em .4em;
 	font-size:.9rem;
@@ -141,17 +129,13 @@ button,
   border-radius:var(--radius);
   /* min-height:1.3em; todo? for select, input same height in chrome, firefox has same height if they have borders? or line-height: 1.2;? line-height can not be set on select */
 }
-
-
 /* text-inputs */
-input,
-textarea {
+input, textarea {
 	width:15em;
 }
 [type=radio], [type=checkbox] {
   width:auto;
 }
-
 /* file-input */
 [type=file] {
   padding-top:0;
@@ -160,11 +144,8 @@ textarea {
   border:none;
   background-color:var(--color-light);
 }
-
 /* buttons */
-button,
-::file-selector-button,
-::-webkit-file-upload-button { /* The selector is not invalidated although ::-webkit-file-upload-button in ff is not working. */
+button, ::file-selector-button, ::-webkit-file-upload-button, .btn { /* The selector is not invalidated although ::-webkit-file-upload-button in ff is not working. */
   transition:color .2s;
   background-color:var(--color);
   color:var(--color-bg);
@@ -174,29 +155,19 @@ button,
   transition:background-color .1s;
 }
 /* buttons hover */
-button:hover:not([disabled]),
-:hover::file-selector-button,
-:hover::-webkit-file-upload-button {
-  background-color:hsl(var(--hsl-h), var(--hsl-s),  calc(var(--hsl-s) * .5)  );
+button:hover:not([disabled]), :hover::file-selector-button, :hover::-webkit-file-upload-button, .btn {
   background-color:var(--color-dark);
 }
-/* buttons disabled */
+/* buttons disabled, todo all elements having disabled-attribute */
 button[disabled] {
     opacity:.5;
 }
 /* file-buttons */
-::file-selector-button,
-::-webkit-file-upload-button,
-select[size], /* chrome */
-select[multiple] /* chrome */
-{
+::file-selector-button, ::-webkit-file-upload-button, select[size], /* chrome */ select[multiple] /* chrome */ {
   border-top-right-radius: 0; /* recheck: border-end-end-radius supported? (-safari) */
   border-bottom-right-radius: 0;
 }
-
-
-
-
+/* figure */
 figure {
   display:flex;
   justify-content: center;

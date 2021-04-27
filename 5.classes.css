@@ -14,7 +14,6 @@
 
 /*
 ## naming
-
 .sr-only:
 - tailwind
 - firefox-reader-mode
@@ -24,7 +23,6 @@
 - bootstrap
 - drupal
 - firefox-reader-mode
-
 */
 .visually-hidden {
     position: absolute !important;

@@ -1,4 +1,4 @@
-:root {
+html {
   --hsl-h: 188.9;
   --hsl-s: 55.1%;
   --hsl-l: 38.4%;
@@ -14,11 +14,29 @@
   /* misc */
   --font:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
   --width:35rem; /* rename? --main-width, --content-width */
+
   --gap:1rem;
 
+  /*
+  --gap\.5:calc(var(--gap)/2);
+  --gap2:calc(var(--gap)*2);
+
+  --gap-xs:.25rem;
+  --gap-s:.5rem;
+  --gap-m:2rem;
+
+  ## golden ratio?
+  --gap-xs: calc(var(--gap-s) / 1.618);
+  --gap-s:  calc(var(--gap)   / 1.618);
+  --gap-m:  calc(var(--gap)   * 1.618);
+  --gap-l:  calc(var(--gap-m) * 1.618);
+  --gap-x:  calc(var(--gap-l) * 1.618);
+
+
+  */
 }
 @media (prefers-color-scheme: dark) {
-  :root {
+  html {
     --color-light: hsl(var(--hsl-h), var(--hsl-s), calc(var(--hsl-l) * .7 ) );
     --color-dark: hsl(var(--hsl-h), var(--hsl-s), calc(var(--hsl-l) + (100% - var(--hsl-l)) * .9 ) );
 

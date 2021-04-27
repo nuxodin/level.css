@@ -1,13 +1,11 @@
-*,
-*::before,
-*::after {
+*, ::before, ::after {
     xbackground: #fff !important;
     xcolor: #000 !important;
     box-shadow: none !important;
     text-shadow: none !important;
 }
 
-:root {
+html {
     --width:auto;
     --color-bg:#fff;
     --color-text:#000;

@@ -41,23 +41,9 @@ function checkStyle(style) {
     for (let prop of style) {
         let value = style.getPropertyValue(prop)
         if (prop === 'line-height') {
-            console.log(prop, value)
-            if (!value.match(/^([0-9.]+|inherit)$/)) {
+            if (value.match(/(em|px|ex|%)^/)) {
                 console.error('line-height should have no unit');
             }
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-/* find browser bugs */
-const els = document.querySelectorAll(':visited')
-if (els.length) console.error('there are elements found with :visited!')
