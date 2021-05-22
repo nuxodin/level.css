@@ -26,6 +26,8 @@ https://github.com/h5bp/main.css
 
 https://github.com/krishdevdb/reseter.css
 
+https://github.com/andy-piccalilli/modern-css-reset/blob/master/src/reset.css
+
 ### Classless
 
 https://github.com/picocss/pico
