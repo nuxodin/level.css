@@ -52,8 +52,6 @@ https://open-ui.org/
 
 https://adele.uxpin.com/
 
-
-
 ### components
 
 pure css lightbox:   
